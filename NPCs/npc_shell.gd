@@ -2,8 +2,6 @@ extends CharacterBody2D
 
 
 const SPEED = 75.0
-Transform2D Location_Day_One_A
-
 
 func _physics_process(delta: float) -> void:
 	

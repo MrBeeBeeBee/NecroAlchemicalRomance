@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://ejhcfpac0fpt"]
+
+[ext_resource type="Script" uid="uid://dnwnk5bk23xan" path="res://Interactables/house.gd" id="1_5oxo7"]
+[ext_resource type="Texture2D" uid="uid://bx2kxtrxob5ov" path="res://Visual Assets/Environment/HouseInterior.png" id="1_rslo4"]
+[ext_resource type="Texture2D" uid="uid://cfdlq6f3ea43t" path="res://Visual Assets/Environment/HouseExterior.png" id="2_5oxo7"]
+[ext_resource type="Script" uid="uid://cqrgy677c5nc5" path="res://Interactables/interactableItem.gd" id="3_kjlmf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p1bnn"]
+size = Vector2(26, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5oxo7"]
+
+[node name="House" type="Node2D"]
+script = ExtResource("1_5oxo7")
+
+[node name="HouseInterior" type="Sprite2D" parent="."]
+position = Vector2(64, -64)
+texture = ExtResource("1_rslo4")
+
+[node name="HouseExterior" type="Sprite2D" parent="."]
+position = Vector2(64, -64)
+texture = ExtResource("2_5oxo7")
+
+[node name="FrontDoor" type="Area2D" parent="HouseExterior"]
+script = ExtResource("3_kjlmf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HouseExterior/FrontDoor"]
+position = Vector2(-40, 46)
+shape = SubResource("RectangleShape2D_p1bnn")
+
+[node name="Left Wall" type="StaticBody2D" parent="."]
+position = Vector2(7, -48)
+scale = Vector2(-0.322921, 4.72661)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left Wall"]
+shape = SubResource("RectangleShape2D_5oxo7")
+disabled = true
+
+[node name="Right Wall" type="StaticBody2D" parent="."]
+position = Vector2(121, -48)
+scale = Vector2(-0.322921, 4.72661)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right Wall"]
+shape = SubResource("RectangleShape2D_5oxo7")
+disabled = true
+
+[node name="Upper Floor" type="StaticBody2D" parent="."]
+position = Vector2(64, -47)
+scale = Vector2(-5.3727, 0.604911)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Upper Floor"]
+shape = SubResource("RectangleShape2D_5oxo7")
+
+[connection signal="area_entered" from="HouseExterior/FrontDoor" to="HouseExterior/FrontDoor" method="_on_area_entered"]
+[connection signal="body_entered" from="HouseExterior/FrontDoor" to="HouseExterior/FrontDoor" method="_on_body_entered"]
