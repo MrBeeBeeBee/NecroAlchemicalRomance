@@ -2,6 +2,7 @@ extends Node2D
 
 var left_wall_collision
 var right_wall_collision
+var last_interacted_node
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,7 +10,7 @@ func _ready() -> void:
 	left_wall_collision = $"Left Wall/CollisionShape2D"
 	right_wall_collision = $"Right Wall/CollisionShape2D"
 
-func UseDoor():
+func UseDoor(sender):
 	if($HouseExterior.is_visible_in_tree()):
 		$HouseExterior.hide()
 		left_wall_collision.disabled = false
@@ -18,4 +19,8 @@ func UseDoor():
 		$HouseExterior.show()
 		left_wall_collision.disabled = true
 		right_wall_collision.disabled = true
+		
+	if(sender):
+		last_interacted_node = sender
+		print(last_interacted_node.itemLost)
 		

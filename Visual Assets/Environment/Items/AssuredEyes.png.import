@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deu4udk0nxc2r"
-path="res://.godot/imported/UnmarkedCalendar.png-0452ffeb593189141fc4de944ecae30f.ctex"
+uid="uid://b8cwj6x24la52"
+path="res://.godot/imported/AssuredEyes.png-8777dc8560da680afec2400043e62dd3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/InteractableItems/UnmarkedCalendar.png"
-dest_files=["res://.godot/imported/UnmarkedCalendar.png-0452ffeb593189141fc4de944ecae30f.ctex"]
+source_file="res://Visual Assets/Environment/Items/AssuredEyes.png"
+dest_files=["res://.godot/imported/AssuredEyes.png-8777dc8560da680afec2400043e62dd3.ctex"]
 
 [params]
 

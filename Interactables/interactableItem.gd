@@ -1,6 +1,11 @@
 extends Area2D
 
-signal playerInteractable
+@export var hasCondition = false
+@export var interactCondition = false
+@export var itemLost = ""
+@export var itemGained = ""
+
+signal playerInteractable(sender)
 
 func interact():
-	emit_signal("playerInteractable")
+	emit_signal("playerInteractable", self)

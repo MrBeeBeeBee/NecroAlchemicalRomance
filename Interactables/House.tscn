@@ -23,6 +23,7 @@ texture = ExtResource("2_5oxo7")
 
 [node name="FrontDoor" type="Area2D" parent="HouseExterior"]
 script = ExtResource("3_kjlmf")
+itemLost = "Your Mom"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HouseExterior/FrontDoor"]
 position = Vector2(-40, 46)

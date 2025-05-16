@@ -26,16 +26,16 @@ func _physics_process(_delta: float) -> void:
 func _on_body_entered(body):
 	if body.has_method("interact"):
 		interactableObject = body
-		print("I have the function you're looking for")
+		print("Can Interact")
 	else:
-		print("I do not have the function you're looking for")
+		print("Can't Interact")
 		
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.has_method("interact"):
 		interactableObject = area
-		print("I have the function you're looking for")
+		print("Can Interact")
 	else:
-		print("I do not have the function you're looking for")
+		print("Can't Interact")
 
 func _process(_delta):
 	if interactableObject && Input.is_action_just_pressed("interactButton"):
@@ -44,5 +44,5 @@ func _process(_delta):
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area.has_method("interact"):
-		print("Bye bye, leaving object")
+		print("Leaving object")
 		interactableObject = null
