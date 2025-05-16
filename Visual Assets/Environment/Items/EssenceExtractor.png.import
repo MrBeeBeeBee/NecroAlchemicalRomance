@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfdlq6f3ea43t"
-path="res://.godot/imported/HouseExterior.png-fa7f092f3027722cb7182b0cfb8b1985.ctex"
+uid="uid://dla5vjsysqnpv"
+path="res://.godot/imported/EssenceExtractor.png-7a85f6b3054bd9f5b2bbe943eb479cc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Environment/HouseExterior.png"
-dest_files=["res://.godot/imported/HouseExterior.png-fa7f092f3027722cb7182b0cfb8b1985.ctex"]
+source_file="res://Visual Assets/Environment/Items/EssenceExtractor.png"
+dest_files=["res://.godot/imported/EssenceExtractor.png-7a85f6b3054bd9f5b2bbe943eb479cc1.ctex"]
 
 [params]
 

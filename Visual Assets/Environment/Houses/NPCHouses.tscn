@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://lle5s165ywws"]
+
+[ext_resource type="Texture2D" uid="uid://17xb1hbxner5" path="res://Visual Assets/Environment/Houses/RyanHouseExterior.png" id="1_axr0x"]
+[ext_resource type="Texture2D" uid="uid://b2w3vp5fur7hd" path="res://Visual Assets/Environment/Houses/JudithHouseExterior.png" id="2_h3j0u"]
+[ext_resource type="Texture2D" uid="uid://bi5hy3b2qp6wk" path="res://Visual Assets/Environment/Houses/ChrisHouseExterior.png" id="3_7pk26"]
+[ext_resource type="Texture2D" uid="uid://hw4mccy2m2xe" path="res://Visual Assets/Environment/Houses/AgathaHouseExterior.png" id="4_tk3l4"]
+
+[node name="NpcHouses" type="Node2D"]
+
+[node name="RyanHouseExterior" type="Sprite2D" parent="."]
+position = Vector2(427, -64)
+texture = ExtResource("1_axr0x")
+
+[node name="JudithHouseExterior" type="Sprite2D" parent="."]
+position = Vector2(862, -64)
+texture = ExtResource("2_h3j0u")
+
+[node name="ChrisHouseExterior" type="Sprite2D" parent="."]
+position = Vector2(1303, -64)
+texture = ExtResource("3_7pk26")
+
+[node name="AgathaHouseExterior" type="Sprite2D" parent="."]
+position = Vector2(1757, -64)
+texture = ExtResource("4_tk3l4")

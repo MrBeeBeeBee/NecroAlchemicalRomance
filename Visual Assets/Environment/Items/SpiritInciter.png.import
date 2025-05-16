@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bx2kxtrxob5ov"
-path="res://.godot/imported/HouseInterior.png-3bae32ab89178377fe0b2bda2e5f469b.ctex"
+uid="uid://cyk1k1k5o250q"
+path="res://.godot/imported/SpiritInciter.png-c336aa7ef607a9916951a384c393bbcf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Environment/HouseInterior.png"
-dest_files=["res://.godot/imported/HouseInterior.png-3bae32ab89178377fe0b2bda2e5f469b.ctex"]
+source_file="res://Visual Assets/Environment/Items/SpiritInciter.png"
+dest_files=["res://.godot/imported/SpiritInciter.png-c336aa7ef607a9916951a384c393bbcf.ctex"]
 
 [params]
 

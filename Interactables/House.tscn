@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://ejhcfpac0fpt"]
 
 [ext_resource type="Script" uid="uid://dnwnk5bk23xan" path="res://Interactables/house.gd" id="1_5oxo7"]
-[ext_resource type="Texture2D" uid="uid://bx2kxtrxob5ov" path="res://Visual Assets/Environment/HouseInterior.png" id="1_rslo4"]
-[ext_resource type="Texture2D" uid="uid://cfdlq6f3ea43t" path="res://Visual Assets/Environment/HouseExterior.png" id="2_5oxo7"]
+[ext_resource type="Texture2D" uid="uid://bx2kxtrxob5ov" path="res://Visual Assets/Environment/Houses/HouseInterior.png" id="1_rslo4"]
+[ext_resource type="Texture2D" uid="uid://cfdlq6f3ea43t" path="res://Visual Assets/Environment/Houses/HouseExterior.png" id="2_5oxo7"]
 [ext_resource type="Script" uid="uid://cqrgy677c5nc5" path="res://Interactables/interactableItem.gd" id="3_kjlmf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p1bnn"]

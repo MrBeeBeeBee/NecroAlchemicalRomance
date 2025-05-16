@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fh8hj6eox6bq"
-path="res://.godot/imported/Cauldron.png-85ee0c555ec7feae1ceecc75418edcbc.ctex"
+uid="uid://c6f2wap1sfnyd"
+path="res://.godot/imported/VillageBackdropLayerTwo.png-42b427c3863fc567c4f662c3e3d1ceea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Environment/Cauldron.png"
-dest_files=["res://.godot/imported/Cauldron.png-85ee0c555ec7feae1ceecc75418edcbc.ctex"]
+source_file="res://Visual Assets/Environment/BG/VillageBackdropLayerTwo.png"
+dest_files=["res://.godot/imported/VillageBackdropLayerTwo.png-42b427c3863fc567c4f662c3e3d1ceea.ctex"]
 
 [params]
 

@@ -194,5 +194,11 @@ libraries = {
 }
 autoplay = "Player Walk Left"
 
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, -55.705)
+zoom = Vector2(3.63, 3.63)
+limit_left = -320
+limit_right = 2080
+
 [connection signal="area_entered" from="Player/Area2D" to="Player" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Player/Area2D" to="Player" method="_on_area_2d_area_exited"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyk1k1k5o250q"
-path="res://.godot/imported/SpiritInciter.png-8b7439f8598659f482636ca3338d7c48.ctex"
+uid="uid://bi5hy3b2qp6wk"
+path="res://.godot/imported/ChrisHouseExterior.png-0bc3a8590aea2c0c39ef505f14c57886.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Environment/SpiritInciter.png"
-dest_files=["res://.godot/imported/SpiritInciter.png-8b7439f8598659f482636ca3338d7c48.ctex"]
+source_file="res://Visual Assets/Environment/Houses/ChrisHouseExterior.png"
+dest_files=["res://.godot/imported/ChrisHouseExterior.png-0bc3a8590aea2c0c39ef505f14c57886.ctex"]
 
 [params]
 

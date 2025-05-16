@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddj8pqdggfplt"
-path="res://.godot/imported/MortarAndPestle.png-5f20e43d72879823c32a22e22e112403.ctex"
+uid="uid://b8cpwjso6qu7j"
+path="res://.godot/imported/VillageBackdropLayerOne.png-a49659306250e29b7d998b50fdf33a48.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Environment/MortarAndPestle.png"
-dest_files=["res://.godot/imported/MortarAndPestle.png-5f20e43d72879823c32a22e22e112403.ctex"]
+source_file="res://Visual Assets/Environment/BG/VillageBackdropLayerOne.png"
+dest_files=["res://.godot/imported/VillageBackdropLayerOne.png-a49659306250e29b7d998b50fdf33a48.ctex"]
 
 [params]
 

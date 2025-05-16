@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cabvkkcpn038o"
-path="res://.godot/imported/SpellReciter.png-aca14c2691fb0007c74344c8558134a2.ctex"
+uid="uid://cfdlq6f3ea43t"
+path="res://.godot/imported/HouseExterior.png-c7ec5c28efb544ea8e0aa699f67e757a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Environment/SpellReciter.png"
-dest_files=["res://.godot/imported/SpellReciter.png-aca14c2691fb0007c74344c8558134a2.ctex"]
+source_file="res://Visual Assets/Environment/Houses/HouseExterior.png"
+dest_files=["res://.godot/imported/HouseExterior.png-c7ec5c28efb544ea8e0aa699f67e757a.ctex"]
 
 [params]
 

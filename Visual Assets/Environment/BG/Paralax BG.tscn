@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2aogeaagix6c"]
+
+[ext_resource type="Script" uid="uid://bb7qcfgoxrx7o" path="res://Visual Assets/Environment/BG/paralax_bg.gd" id="1_j064s"]
+[ext_resource type="Texture2D" uid="uid://ceqp63mcqe10m" path="res://Visual Assets/Environment/BG/VillageBackdropSky.png" id="2_se2td"]
+[ext_resource type="Texture2D" uid="uid://blwcr3666xldx" path="res://Visual Assets/Environment/BG/VillageBackdropLayerThree.png" id="3_r07e1"]
+[ext_resource type="Texture2D" uid="uid://c6f2wap1sfnyd" path="res://Visual Assets/Environment/BG/VillageBackdropLayerTwo.png" id="4_bb6vt"]
+[ext_resource type="Texture2D" uid="uid://b8cpwjso6qu7j" path="res://Visual Assets/Environment/BG/VillageBackdropLayerOne.png" id="5_52gnp"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = ExtResource("1_j064s")
+
+[node name="Backdrop" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(395, 0)
+
+[node name="VillageBackdropSky" type="Sprite2D" parent="Backdrop"]
+position = Vector2(197.5, -83)
+scale = Vector2(0.771484, 0.864583)
+texture = ExtResource("2_se2td")
+
+[node name="ForestLayerThree" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(395, 0)
+
+[node name="VillageBackdropLayerThree" type="Sprite2D" parent="ForestLayerThree"]
+position = Vector2(197.5, -83)
+scale = Vector2(0.771484, 0.864583)
+texture = ExtResource("3_r07e1")
+
+[node name="ForestLayerTwo" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(395, 0)
+
+[node name="VillageBackdropLayerTwo" type="Sprite2D" parent="ForestLayerTwo"]
+position = Vector2(197.5, -83)
+scale = Vector2(0.771484, 0.864583)
+texture = ExtResource("4_bb6vt")
+
+[node name="ForestLayerOne" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(395, 0)
+
+[node name="VillageBackdropLayerOne" type="Sprite2D" parent="ForestLayerOne"]
+position = Vector2(197.5, -83)
+scale = Vector2(0.771484, 0.864583)
+texture = ExtResource("5_52gnp")

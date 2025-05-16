@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dla5vjsysqnpv"
-path="res://.godot/imported/EssenceExtractor.png-6e6e61e49bc1b0b9af6ace4b72f8282e.ctex"
+uid="uid://bx2kxtrxob5ov"
+path="res://.godot/imported/HouseInterior.png-2da0f594ce43eabe431b5d19755555c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Environment/EssenceExtractor.png"
-dest_files=["res://.godot/imported/EssenceExtractor.png-6e6e61e49bc1b0b9af6ace4b72f8282e.ctex"]
+source_file="res://Visual Assets/Environment/Houses/HouseInterior.png"
+dest_files=["res://.godot/imported/HouseInterior.png-2da0f594ce43eabe431b5d19755555c8.ctex"]
 
 [params]
 
