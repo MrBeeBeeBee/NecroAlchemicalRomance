@@ -1,12 +1,13 @@
-[gd_scene load_steps=12 format=4 uid="uid://crxpt35xyuw01"]
+[gd_scene load_steps=13 format=4 uid="uid://crxpt35xyuw01"]
 
 [ext_resource type="Texture2D" uid="uid://d3ij2d2dotud" path="res://Visual Assets/Tiles/BasicPathSprite.png" id="1_0n4wa"]
 [ext_resource type="PackedScene" uid="uid://ejhcfpac0fpt" path="res://Interactables/House.tscn" id="2_m38k2"]
-[ext_resource type="PackedScene" uid="uid://26y58adhfujb" path="res://Player/player.tscn" id="3_puia7"]
 [ext_resource type="PackedScene" uid="uid://lle5s165ywws" path="res://Visual Assets/Environment/Houses/NPCHouses.tscn" id="8_0n4wa"]
 [ext_resource type="Texture2D" uid="uid://pp871wvl3q37" path="res://Visual Assets/Characters/AgathaFront.png" id="8_dysil"]
+[ext_resource type="PackedScene" uid="uid://br7q2a76ljose" path="res://Player/player.tscn" id="9_0n4wa"]
 [ext_resource type="Texture2D" uid="uid://od1oiectrbvq" path="res://Visual Assets/Characters/ChrisFront.png" id="9_8wcqk"]
 [ext_resource type="Texture2D" uid="uid://tjmqcsxyxrr2" path="res://Visual Assets/Characters/JudithFront.png" id="10_667vx"]
+[ext_resource type="PackedScene" uid="uid://cy3r8ayri6jy5" path="res://scenes/InteractableManager.tscn" id="11_m38k2"]
 [ext_resource type="Texture2D" uid="uid://do14so1vvpawp" path="res://Visual Assets/Characters/RyanFront.png" id="11_ojbe6"]
 [ext_resource type="PackedScene" uid="uid://c2aogeaagix6c" path="res://Visual Assets/Environment/BG/Paralax BG.tscn" id="12_ff6um"]
 
@@ -29,6 +30,8 @@ tile_set = SubResource("TileSet_gv2ww")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("12_ff6um")]
 
+[node name="InteractableManager" parent="." instance=ExtResource("11_m38k2")]
+
 [node name="House" parent="." instance=ExtResource("2_m38k2")]
 position = Vector2(-41, 0)
 
@@ -47,10 +50,11 @@ position = Vector2(791, -16)
 texture = ExtResource("10_667vx")
 
 [node name="RyanFront" type="Sprite2D" parent="Temporary NPC Node"]
+visible = false
 position = Vector2(354, -16)
 texture = ExtResource("11_ojbe6")
 
 [node name="NpcHouses" parent="." instance=ExtResource("8_0n4wa")]
 
-[node name="Player" parent="." instance=ExtResource("3_puia7")]
-position = Vector2(-55, 0)
+[node name="Player" parent="." instance=ExtResource("9_0n4wa")]
+position = Vector2(-60, 0)

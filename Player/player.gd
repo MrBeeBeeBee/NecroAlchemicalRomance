@@ -23,26 +23,28 @@ func _physics_process(_delta: float) -> void:
 
 	move_and_slide()
 
-func _on_body_entered(body):
-	if body.has_method("interact"):
-		interactableObject = body
-		print("Can Interact")
-	else:
-		print("Can't Interact")
+#func _on_body_entered(body):
+	#if body.has_method("interact"):
+		#interactableObject = body
+		#print("Can Interact")
+	#else:
+		#print("Can't Interact")
 		
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.has_method("interact"):
 		interactableObject = area
+		$Alerted.show()
 		print("Can Interact")
 	else:
 		print("Can't Interact")
 
 func _process(_delta):
 	if interactableObject && Input.is_action_just_pressed("interactButton"):
-		print("pressing interact button")
+		print("Pressing interact button")
 		interactableObject.interact()
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area.has_method("interact"):
+		$Alerted.hide()
 		print("Leaving object")
 		interactableObject = null

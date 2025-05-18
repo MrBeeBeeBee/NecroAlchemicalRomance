@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://brcoyn0lqf18q"]
+
+[ext_resource type="PackedScene" uid="uid://cb7v8024xt1rk" path="res://Visual Assets/Environment/Items/CleanLaundry.tscn" id="1_xd0om"]
+[ext_resource type="PackedScene" uid="uid://bxym7w0s1uvw" path="res://Visual Assets/Environment/Items/DirtyLaundry.tscn" id="3_r8ol5"]
+[ext_resource type="PackedScene" uid="uid://cbl8wpdm6fbct" path="res://Visual Assets/Environment/Items/UnmarkedCalendar.tscn" id="4_b37it"]
+[ext_resource type="PackedScene" uid="uid://b174aekeiv57g" path="res://Visual Assets/Environment/Items/PairOfFeet.tscn" id="5_tioy7"]
+
+[node name="DayOneItems" type="Node2D"]
+
+[node name="DirtyLaundry" parent="." instance=ExtResource("3_r8ol5")]
+position = Vector2(49.5, -56.5)
+
+[node name="CleanLaundry" parent="." instance=ExtResource("1_xd0om")]
+position = Vector2(25, -61)
+
+[node name="UnmarkedCalendar" parent="." instance=ExtResource("4_b37it")]
+position = Vector2(5, -75)
+
+[node name="Ryan(PoF)" parent="." instance=ExtResource("5_tioy7")]
+position = Vector2(355, 0)

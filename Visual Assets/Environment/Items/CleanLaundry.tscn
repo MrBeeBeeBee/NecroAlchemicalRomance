@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cb7v8024xt1rk"]
+
+[ext_resource type="Script" uid="uid://cqrgy677c5nc5" path="res://Visual Assets/Environment/Items/interactableItem.gd" id="1_n0126"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gh5su"]
+size = Vector2(7, 6)
+
+[node name="CleanLaundry" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_n0126")
+itemIndexRequired = 0
+itemIndex = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_gh5su")

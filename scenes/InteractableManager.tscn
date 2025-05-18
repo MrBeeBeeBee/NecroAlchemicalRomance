@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy3r8ayri6jy5"]
+
+[ext_resource type="Script" uid="uid://cnba1jd8bqdnb" path="res://scenes/interactable_manager.gd" id="1_uchck"]
+[ext_resource type="PackedScene" uid="uid://brcoyn0lqf18q" path="res://Visual Assets/Environment/Items/dayOneItems.tscn" id="2_qt635"]
+
+[node name="InteractableManager" type="Node2D"]
+script = ExtResource("1_uchck")
+
+[node name="DayOneItems" parent="." instance=ExtResource("2_qt635")]
+
+[node name="DayFourItems" type="Node2D" parent="."]
+
+[node name="DayTwoItems" type="Node2D" parent="."]
+
+[node name="DayThreeItems" type="Node2D" parent="."]
+
+[node name="DayFiveItems" type="Node2D" parent="."]

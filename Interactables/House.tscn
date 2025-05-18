@@ -1,9 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://ejhcfpac0fpt"]
+[gd_scene load_steps=12 format=3 uid="uid://ejhcfpac0fpt"]
 
 [ext_resource type="Script" uid="uid://dnwnk5bk23xan" path="res://Interactables/house.gd" id="1_5oxo7"]
 [ext_resource type="Texture2D" uid="uid://bx2kxtrxob5ov" path="res://Visual Assets/Environment/Houses/HouseInterior.png" id="1_rslo4"]
 [ext_resource type="Texture2D" uid="uid://cfdlq6f3ea43t" path="res://Visual Assets/Environment/Houses/HouseExterior.png" id="2_5oxo7"]
-[ext_resource type="Script" uid="uid://cqrgy677c5nc5" path="res://Interactables/interactableItem.gd" id="3_kjlmf"]
+[ext_resource type="Script" uid="uid://cqrgy677c5nc5" path="res://Visual Assets/Environment/Items/interactableItem.gd" id="3_kjlmf"]
+[ext_resource type="Texture2D" uid="uid://fh8hj6eox6bq" path="res://Visual Assets/Environment/Items/Cauldron.png" id="4_vadxs"]
+[ext_resource type="Texture2D" uid="uid://cabvkkcpn038o" path="res://Visual Assets/Environment/Items/SpellReciter.png" id="5_f3aie"]
+[ext_resource type="Texture2D" uid="uid://cyk1k1k5o250q" path="res://Visual Assets/Environment/Items/SpiritInciter.png" id="6_lxdug"]
+[ext_resource type="Texture2D" uid="uid://ddj8pqdggfplt" path="res://Visual Assets/Environment/Items/MortarAndPestle.png" id="7_54o8j"]
+[ext_resource type="Texture2D" uid="uid://dla5vjsysqnpv" path="res://Visual Assets/Environment/Items/EssenceExtractor.png" id="8_jshkp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p1bnn"]
 size = Vector2(26, 34)
@@ -14,19 +19,65 @@ size = Vector2(26, 34)
 script = ExtResource("1_5oxo7")
 
 [node name="HouseInterior" type="Sprite2D" parent="."]
-position = Vector2(64, -64)
 texture = ExtResource("1_rslo4")
+offset = Vector2(64, -64)
+
+[node name="DownstairsDoor" type="Area2D" parent="HouseInterior"]
+position = Vector2(104, 0)
+monitoring = false
+monitorable = false
+script = ExtResource("3_kjlmf")
+itemIndex = -1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HouseInterior/DownstairsDoor"]
+position = Vector2(0, -17)
+shape = SubResource("RectangleShape2D_p1bnn")
+
+[node name="UpstairsDoor" type="Area2D" parent="HouseInterior"]
+position = Vector2(24, -53)
+monitoring = false
+monitorable = false
+script = ExtResource("3_kjlmf")
+itemIndex = -1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HouseInterior/UpstairsDoor"]
+position = Vector2(0, -17)
+shape = SubResource("RectangleShape2D_p1bnn")
+
+[node name="TaskImages" type="Node2D" parent="HouseInterior"]
+
+[node name="Cauldron" type="Sprite2D" parent="HouseInterior/TaskImages"]
+position = Vector2(66, -61)
+texture = ExtResource("4_vadxs")
+
+[node name="SpellReciter" type="Sprite2D" parent="HouseInterior/TaskImages"]
+position = Vector2(78, -66)
+texture = ExtResource("5_f3aie")
+
+[node name="SpiritInciter" type="Sprite2D" parent="HouseInterior/TaskImages"]
+position = Vector2(54, -66)
+texture = ExtResource("6_lxdug")
+
+[node name="MortarAndPestle" type="Sprite2D" parent="HouseInterior/TaskImages"]
+position = Vector2(39, -67)
+texture = ExtResource("7_54o8j")
+
+[node name="EssenceExtractor" type="Sprite2D" parent="HouseInterior/TaskImages"]
+position = Vector2(46, -71)
+texture = ExtResource("8_jshkp")
 
 [node name="HouseExterior" type="Sprite2D" parent="."]
-position = Vector2(64, -64)
 texture = ExtResource("2_5oxo7")
+centered = false
+offset = Vector2(0, -128)
 
 [node name="FrontDoor" type="Area2D" parent="HouseExterior"]
+position = Vector2(24, 0)
 script = ExtResource("3_kjlmf")
-itemLost = "Your Mom"
+itemIndex = -1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HouseExterior/FrontDoor"]
-position = Vector2(-40, 46)
+position = Vector2(0, -17)
 shape = SubResource("RectangleShape2D_p1bnn")
 
 [node name="Left Wall" type="StaticBody2D" parent="."]
@@ -52,5 +103,9 @@ scale = Vector2(-5.3727, 0.604911)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Upper Floor"]
 shape = SubResource("RectangleShape2D_5oxo7")
 
+[connection signal="area_entered" from="HouseInterior/DownstairsDoor" to="HouseInterior/DownstairsDoor" method="_on_area_entered"]
+[connection signal="body_entered" from="HouseInterior/DownstairsDoor" to="HouseInterior/DownstairsDoor" method="_on_body_entered"]
+[connection signal="area_entered" from="HouseInterior/UpstairsDoor" to="HouseInterior/UpstairsDoor" method="_on_area_entered"]
+[connection signal="body_entered" from="HouseInterior/UpstairsDoor" to="HouseInterior/UpstairsDoor" method="_on_body_entered"]
 [connection signal="area_entered" from="HouseExterior/FrontDoor" to="HouseExterior/FrontDoor" method="_on_area_entered"]
 [connection signal="body_entered" from="HouseExterior/FrontDoor" to="HouseExterior/FrontDoor" method="_on_body_entered"]
