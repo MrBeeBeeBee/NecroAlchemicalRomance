@@ -30,10 +30,10 @@ tile_set = SubResource("TileSet_gv2ww")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("12_ff6um")]
 
-[node name="InteractableManager" parent="." instance=ExtResource("11_m38k2")]
-
 [node name="House" parent="." instance=ExtResource("2_m38k2")]
 position = Vector2(-41, 0)
+
+[node name="InteractableManager" parent="." instance=ExtResource("11_m38k2")]
 
 [node name="Temporary NPC Node" type="Node2D" parent="."]
 

@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cb7v8024xt1rk" path="res://Visual Assets/Environment/Items/CleanLaundry.tscn" id="1_xd0om"]
 [ext_resource type="PackedScene" uid="uid://bxym7w0s1uvw" path="res://Visual Assets/Environment/Items/DirtyLaundry.tscn" id="3_r8ol5"]
 [ext_resource type="PackedScene" uid="uid://cbl8wpdm6fbct" path="res://Visual Assets/Environment/Items/UnmarkedCalendar.tscn" id="4_b37it"]
-[ext_resource type="PackedScene" uid="uid://b174aekeiv57g" path="res://Visual Assets/Environment/Items/PairOfFeet.tscn" id="5_tioy7"]
+[ext_resource type="PackedScene" uid="uid://b174aekeiv57g" path="res://Visual Assets/Environment/Items/Ryan(PoF).tscn" id="5_tioy7"]
 
 [node name="DayOneItems" type="Node2D"]
 
