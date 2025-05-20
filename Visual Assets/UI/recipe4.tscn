@@ -1,0 +1,121 @@
+[gd_scene load_steps=11 format=3 uid="uid://cct2ln0ho8mf0"]
+
+[ext_resource type="Texture2D" uid="uid://ciebk2rc11n4p" path="res://Visual Assets/UI/RecipeBG.png" id="1_7mmrq"]
+[ext_resource type="Texture2D" uid="uid://qt0kveuboyh" path="res://Visual Assets/UI/Plus.png" id="1_rybke"]
+[ext_resource type="Texture2D" uid="uid://clewkmelk1g4f" path="res://Visual Assets/UI/Equals.png" id="2_010ql"]
+[ext_resource type="Texture2D" uid="uid://c3bxvcnvvqule" path="res://Visual Assets/UI/Check.png" id="3_oqljl"]
+[ext_resource type="Texture2D" uid="uid://cupt7ot8hrgis" path="res://Visual Assets/Environment/Items/ListeningEars.png" id="4_rhiwf"]
+[ext_resource type="Texture2D" uid="uid://cabvkkcpn038o" path="res://Visual Assets/Environment/Items/SpellReciter.png" id="5_e3a85"]
+[ext_resource type="Texture2D" uid="uid://dti5p6yt1tvxu" path="res://Visual Assets/Environment/Items/TrueWordsOfACherishedMemory.png" id="6_s8osh"]
+[ext_resource type="Texture2D" uid="uid://tggan8qaev8u" path="res://Visual Assets/UI/AgathaIcon.png" id="7_1p1mg"]
+[ext_resource type="Texture2D" uid="uid://b5dmdndq27l4b" path="res://Visual Assets/Environment/Items/WellWornWeddingRing.png" id="8_x7vod"]
+[ext_resource type="FontFile" uid="uid://8kktrg8im3vb" path="res://Visual Assets/UI/PressStart2P.ttf" id="9_010ql"]
+
+[node name="Recipe4" type="Node2D"]
+
+[node name="RecipeImage" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_left = 1.225
+anchor_top = 1.05
+anchor_right = 1.225
+anchor_bottom = 1.05
+offset_left = -151.0
+offset_top = -139.0
+offset_right = -91.0
+offset_bottom = -87.0
+scale = Vector2(1.02457, 1.06926)
+texture = ExtResource("1_7mmrq")
+metadata/_edit_use_anchors_ = true
+
+[node name="Line1" type="Node2D" parent="."]
+scale = Vector2(0.819653, 0.855406)
+
+[node name="Plus" type="Sprite2D" parent="Line1"]
+position = Vector2(-165.924, -135.608)
+scale = Vector2(0.512283, 0.534629)
+texture = ExtResource("1_rybke")
+
+[node name="Equals" type="Sprite2D" parent="Line1"]
+position = Vector2(-144.523, -135.608)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("2_010ql")
+
+[node name="Check" type="Sprite2D" parent="Line1"]
+visible = false
+position = Vector2(-120.783, -136.777)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_oqljl")
+
+[node name="ListeningEars" type="Sprite2D" parent="Line1"]
+position = Vector2(-175.684, -135.608)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_rhiwf")
+
+[node name="SpellReciter" type="Sprite2D" parent="Line1"]
+position = Vector2(-156.264, -136.96)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_e3a85")
+
+[node name="TrueWordsOfACherishedMemory" type="Sprite2D" parent="Line1"]
+position = Vector2(-134.203, -136.777)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("6_s8osh")
+
+[node name="Line2" type="Node2D" parent="."]
+scale = Vector2(0.819653, 0.855406)
+
+[node name="AgathaIcon" type="Sprite2D" parent="Line2"]
+position = Vector2(-156.164, -123.918)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("7_1p1mg")
+
+[node name="Equals" type="Sprite2D" parent="Line2"]
+position = Vector2(-144.523, -123.918)
+scale = Vector2(0.624655, 0.625434)
+texture = ExtResource("2_010ql")
+
+[node name="Check" type="Sprite2D" parent="Line2"]
+visible = false
+position = Vector2(-120.783, -125.087)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_oqljl")
+
+[node name="ListeningEars" type="Sprite2D" parent="Line2"]
+position = Vector2(-132.983, -123.918)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_rhiwf")
+
+[node name="Line3" type="Node2D" parent="."]
+scale = Vector2(0.819653, 0.855406)
+
+[node name="Equals" type="Sprite2D" parent="Line3"]
+position = Vector2(-144.523, -112.227)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("2_010ql")
+
+[node name="Check" type="Sprite2D" parent="Line3"]
+visible = false
+position = Vector2(-120.783, -113.396)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_oqljl")
+
+[node name="WellWornWeddingRing" type="Sprite2D" parent="Line3"]
+position = Vector2(-156.164, -113.396)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("8_x7vod")
+
+[node name="WellWornWeddingRing2" type="Sprite2D" parent="Line3"]
+position = Vector2(-132.983, -113.396)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("8_x7vod")
+
+[node name="Recipe Title" type="Label" parent="."]
+offset_left = -145.0
+offset_top = -129.0
+offset_right = 163.0
+offset_bottom = -106.0
+scale = Vector2(0.211876, 0.527717)
+theme_override_colors/font_color = Color(0.640306, 0.0292697, 0.0163941, 1)
+theme_override_fonts/font = ExtResource("9_010ql")
+theme_override_font_sizes/font_size = 11
+text = "Appreciation For Life"

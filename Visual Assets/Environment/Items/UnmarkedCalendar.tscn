@@ -11,7 +11,7 @@ size = Vector2(13, 24)
 [node name="UnmarkedCalendar" type="Sprite2D" parent="."]
 texture = ExtResource("1_hme8a")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["VisibleItem"]]
 script = ExtResource("2_nim33")
 itemIndex = 2
 

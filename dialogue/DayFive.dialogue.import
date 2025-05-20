@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://boennwkmh6qq7"
+path="res://.godot/imported/DayFive.dialogue-e85d62b798ebb54a1e71f967d39befe9.tres"
+
+[deps]
+
+source_file="res://dialogue/DayFive.dialogue"
+dest_files=["res://.godot/imported/DayFive.dialogue-e85d62b798ebb54a1e71f967d39befe9.tres"]
+
+[params]
+
+defaults=true

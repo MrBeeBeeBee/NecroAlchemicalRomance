@@ -1,0 +1,23 @@
+~ EndOfDayFiveCutscene
+set Player.canMove = false
+
+if (IM.inventory[14] && IM.inventory[15] && IM.inventory[16]):
+	Harry: "With these last few ingredients, I complete the final ritual."
+	Harry: "..."
+	Harry: "I won't get to see the result, and maybe this was all for nothing..."
+	Harry: "..."
+	Harry: "But if there's even a small chance that you get to live in this world..."
+	Harry: "..."
+	Harry: "With all of these alchemical recipes completed."
+	Harry: "With ingredients drawn from the dead, comprising of experiences only the living can possess."
+	Harry: "I transfer my life unto you, my beloved."
+	Harry: "My husband..."
+	set IM.dayCounter = 6
+	do IM.emit_signal("changeItems")
+	set Player.canMove = true
+else:
+	I haven't gathered all of the components for today's recipe yet.
+	This is the last step. Just one more recipe and he'll be back...
+	set Player.canMove = true
+
+=> END

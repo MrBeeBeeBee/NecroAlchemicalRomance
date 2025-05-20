@@ -1,0 +1,143 @@
+~ RyanDayOne
+set Player.canMove = false
+set NPC.tempElapTime = NPC.elapsedTime
+set NPC.tempCycProg = NPC.cycleProgress
+
+Ryan: "Well hello there, Mort. How's yer day been?"
+It would be easy enough to kill him right here and now, but should I?
+- Kill Him [if IM.inventory[1] && IM.inventory[2]]
+	Well I can't just kill him out in the open now, can I?
+	Mort: "My day's really gotten off on the right foot, Ryan!"
+	Mort: "Say, do you think you'd be able to help me out in the house later?"
+	A gleeful smile lit up his face, exposing a gap in his teeth.
+	Ryan: "I sure would love to help you out, Mort! What time do you need me there?"
+	I'd say it was too easy, but just talking to him was already getting me impatient.
+	Mort: "Could you head over now? I have a few things to wrap up, but I'll meet you back at the house."
+	Mort: "The doors open, so you can just let yourself right in, like you always do."
+	Ryan: "Well alrighty then, I'll just make myself right at home. See ya shortly!"
+	set NPC.canBeKilled = true
+	set NPC.elapsedTime = 0
+	set NPC.cycleProgress = 0
+	set NPC.currentLocation = NPC.get_parent().position
+	set NPC.isIdle = false
+	Ryan skipped off towards my house faster than I could even thank him. I have all the time in the world to do the deed, now.
+- Don't Kill Him
+	It isn't the right time yet. At the very least I should gather what ingredients I can before I get the most vital ones.
+	It would be annoying if people noticed he was missing before I got what I needed.
+	Mort: "I'm just find and dandy, Ryan. I can't stand to talk right now, but mind if I drop by later?"
+	Ryan: "Sure thing, bud! You always know where to find me!"
+	Ryan quickly went back to whatever he was doing. It really is that simple, huh.
+	set NPC.conversationsHad -= 1
+
+	set NPC.elapsedTime = NPC.tempElapTime
+	set NPC.cycleProgress = NPC.tempCycProg
+	set NPC.isIdle = false
+	set NPC.canMove = true
+	set Player.canMove = true
+
+=> END
+
+~ JudithDayOne
+set Player.canMove = false
+set NPC.tempElapTime = NPC.elapsedTime
+set NPC.tempCycProg = NPC.cycleProgress
+
+Judith looks up to see me just before I walk up to her. She's surprisingly lucid today.
+Judith: "Oh hello there, Mort! Pleasant day we're having, isn't it?"
+I don't even need to look around to know that the weather is awful. It always is around these parts. Strangely, that was something Harry liked about this village. It was why we lived here.
+I didn't want to stir up any drama. Judith didn't need to know anything was wrong.
+Mort: "Oh absolutely, Judith. And do my eyes deceive me or are your tulips finally blooming?"
+They weren't. Nothing pretty ever grew around these parts, but Judith couldn't tell without her glasses on, and she never wore them.
+Judith: "Oh are they now? That's just music to my ears, I must finally be doing something right!"
+She looked happy with herself. I almost catch myself smiling for real.
+Mort: "Well I'll let you get back to them. Can't let your green thumb fade away, now can we?"
+Judith shook her head with uncanny vigor.
+Judith: "I'll have a full garden by the next time you see me, Mort. Just you wait."
+I slipped away as she dove back into tending to her garden as best as she could.
+
+set NPC.elapsedTime = NPC.tempElapTime
+set NPC.cycleProgress = NPC.tempCycProg
+set NPC.isIdle = false
+set NPC.canMove = true
+set Player.canMove = true
+
+=> END
+
+~ ChrisDayOne
+set Player.canMove = false
+set NPC.tempElapTime = NPC.elapsedTime
+set NPC.tempCycProg = NPC.cycleProgress
+
+A delicious smell was wafting from Chris's house as I walked by. It wasn't unusual, being that he's an aspiring big city chef, but this time he was grilling outside.
+Before I had the sense to walk in the other direction, Chris was waving me over.
+Chris: "Mr. Mort! Over here!"
+The waving only got stronger the longer I wasn't approaching, so I acquiesced.
+Mort: "So what do we have here today, Chris? Another one of your 'creative' experiments?"
+Chris looked ta me with so much fervor it was almost blinding.
+Chris: "You bet it is! I can't let you know the recipe, but I'll make some whenever you ask!"
+He was acting like he was using some super secret ingredient, but we were in the middle of nowhere. 
+I knew every ingredient he could get his hands on in a thirty mile radius, and none were very impressive.
+Mort: "I might just take you up on that offer, Chris. Thank you for lending me that knife by the way, there was no way anything back home was gonna cut it. Get it?"
+Chris erupted into the same boisterous laughter I'd heard many times over. Harry used to love that laugh.
+Chris: "I didn't expect you to have such comedic chops, Mr. Mort!"
+Mort: "Think of it as a once in a lifetime sort of deal. Hey, I'll see you around, okay?"
+Chris nodded and waved goodbye, already focused back in on the dish he was preparing.
+Chris: "Catch ya later, Mr. Mort!"
+I slinked away, my skin absolutely crawling from that overenthusiastic energy of his.
+
+set NPC.elapsedTime = NPC.tempElapTime
+set NPC.cycleProgress = NPC.tempCycProg
+set NPC.isIdle = false
+set NPC.canMove = true
+set Player.canMove = true
+
+=> END
+
+~ AgathaDayOne
+set Player.canMove = false
+set NPC.tempElapTime = NPC.elapsedTime
+set NPC.tempCycProg = NPC.cycleProgress
+
+Agatha: "Mortimer."
+Another brisk nod. The same nod that she'd given me every other day we'd ever seen each other. She used to nod twice.
+Mort: "Agatha."
+Every interaction started like this, like some sort of tradition. Sometimes it felt special, like a secret handshake, but I know she talks to everyone like this.
+Mort: "You see anything out in the woods to be afraid of? I know the woods have been a bit quieter than usual."
+Agatha shook her head firmly once before looking sternly into the woods.
+Agatha: "No, I can't say I have. I always do my best to keep an eye on things, you know."
+Her stoic disposition briefly falters.
+Agatha: "I've been trying harder ever since... Well, ever since Harry passed. I know it hasn't been that long but-"
+Mort: "No need, Agatha. I'm sure you did your absolute best. You don't need to say another word."
+It's been especially tense with Agatha for the past week. Harry's body is still fresh in the grave we dug him. She says feels the worst out of anyone.
+Agatha sighs uncharacteristically, though she quickly returns to her usual demeanor.
+Agatha: "You're made of some pretty strong stuff, Mort. It makes me proud to know you."
+Agatha: "I want to say I'll be watching you closely, but I know how you like your private time. I'll leave you be for a while, but if you ever need absolutely anything, you know who to come to, alright?"
+I nodded with the agreement she wanted to hear.
+Mort: "Thank you, Agatha. I think that's just what I need."
+We exhanged our usual curt nods as I walked away.
+
+set NPC.elapsedTime = NPC.tempElapTime
+set NPC.cycleProgress = NPC.tempCycProg
+set NPC.isIdle = false
+set NPC.canMove = true
+set Player.canMove = true
+
+=> END
+
+~ EndOfDayOneCutscene
+set Player.canMove = false
+
+if (IM.inventory[0] && IM.inventory[1] && IM.inventory[2] && IM.inventory[3]):
+	I've gathered all the items I need for today's recipe.
+	Part of me is sorry that I had to kill Ryan, but if there's any chance to bring Harry back, I have to take it.
+	It's all their fault he's gone anyways...
+	
+	set IM.dayCounter = 2
+	do IM.emit_signal("changeItems")
+	set Player.canMove = true
+else:
+	I haven't gathered all of the components for today's recipe yet.
+	The book was very specific about what I needed. I'm running out of time, so I can't sleep yet.
+	set Player.canMove = true
+
+=> END

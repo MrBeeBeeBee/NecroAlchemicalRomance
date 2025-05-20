@@ -1,0 +1,121 @@
+[gd_scene load_steps=12 format=3 uid="uid://bkfu8kafefyb3"]
+
+[ext_resource type="Texture2D" uid="uid://qt0kveuboyh" path="res://Visual Assets/UI/Plus.png" id="1_43opv"]
+[ext_resource type="Texture2D" uid="uid://ciebk2rc11n4p" path="res://Visual Assets/UI/RecipeBG.png" id="1_dwjud"]
+[ext_resource type="Texture2D" uid="uid://clewkmelk1g4f" path="res://Visual Assets/UI/Equals.png" id="2_6eob6"]
+[ext_resource type="Texture2D" uid="uid://c3bxvcnvvqule" path="res://Visual Assets/UI/Check.png" id="3_pinqt"]
+[ext_resource type="Texture2D" uid="uid://bx2038hwt306w" path="res://Visual Assets/Environment/Items/FamilyPhoto.png" id="4_gakyg"]
+[ext_resource type="Texture2D" uid="uid://bd3tl26co3oyv" path="res://Visual Assets/Environment/Items/TornUpFamilyPhoto.png" id="5_k6pnr"]
+[ext_resource type="Texture2D" uid="uid://ddj8pqdggfplt" path="res://Visual Assets/Environment/Items/MortarAndPestle.png" id="6_65bfk"]
+[ext_resource type="Texture2D" uid="uid://bj1hnc0fukov3" path="res://Visual Assets/UI/JudithIcon.png" id="7_2bxpf"]
+[ext_resource type="Texture2D" uid="uid://d3qicx1i22rjh" path="res://Visual Assets/Environment/Items/HoldingHands.png" id="8_crqrm"]
+[ext_resource type="Texture2D" uid="uid://diloajy2wfmcu" path="res://Visual Assets/Environment/Items/PeasInAPod.png" id="9_3nx2q"]
+[ext_resource type="FontFile" uid="uid://8kktrg8im3vb" path="res://Visual Assets/UI/PressStart2P.ttf" id="10_6eob6"]
+
+[node name="Recipe2" type="Node2D"]
+
+[node name="RecipeImage" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_left = 1.225
+anchor_top = 1.05
+anchor_right = 1.225
+anchor_bottom = 1.05
+offset_left = -152.0
+offset_top = -139.0
+offset_right = -92.0
+offset_bottom = -87.0
+scale = Vector2(1.02457, 1.06926)
+texture = ExtResource("1_dwjud")
+metadata/_edit_use_anchors_ = true
+
+[node name="Line1" type="Node2D" parent="."]
+scale = Vector2(0.819653, 0.855406)
+
+[node name="Plus" type="Sprite2D" parent="Line1"]
+position = Vector2(-161.977, -136.207)
+scale = Vector2(0.512283, 0.534629)
+texture = ExtResource("1_43opv")
+
+[node name="Equals2" type="Sprite2D" parent="Line1"]
+position = Vector2(-144.523, -135.608)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("2_6eob6")
+
+[node name="Check" type="Sprite2D" parent="Line1"]
+visible = false
+position = Vector2(-120.783, -136.777)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_pinqt")
+
+[node name="FamilyPhoto" type="Sprite2D" parent="Line1"]
+position = Vector2(-171.977, -136.207)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_gakyg")
+
+[node name="TornUpFamilyPhoto" type="Sprite2D" parent="Line1"]
+position = Vector2(-131.977, -136.207)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("5_k6pnr")
+
+[node name="MortarAndPestle" type="Sprite2D" parent="Line1"]
+position = Vector2(-152.977, -136.207)
+texture = ExtResource("6_65bfk")
+
+[node name="Line3" type="Node2D" parent="."]
+scale = Vector2(0.819653, 0.855406)
+
+[node name="Equals" type="Sprite2D" parent="Line3"]
+position = Vector2(-144.523, -123.918)
+scale = Vector2(0.624655, 0.625434)
+texture = ExtResource("2_6eob6")
+
+[node name="Check" type="Sprite2D" parent="Line3"]
+visible = false
+position = Vector2(-120.783, -125.087)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_pinqt")
+
+[node name="JudithIcon" type="Sprite2D" parent="Line3"]
+position = Vector2(-154.374, -125.087)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("7_2bxpf")
+
+[node name="HoldingHands" type="Sprite2D" parent="Line3"]
+position = Vector2(-131.763, -125.087)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("8_crqrm")
+
+[node name="Line2" type="Node2D" parent="."]
+scale = Vector2(0.819653, 0.855406)
+
+[node name="Equals" type="Sprite2D" parent="Line2"]
+position = Vector2(-144.523, -112.227)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("2_6eob6")
+
+[node name="Check" type="Sprite2D" parent="Line2"]
+visible = false
+position = Vector2(-120.783, -113.396)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_pinqt")
+
+[node name="PeasInAPod" type="Sprite2D" parent="Line2"]
+position = Vector2(-154.284, -113.396)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_3nx2q")
+
+[node name="PeasInAPod2" type="Sprite2D" parent="Line2"]
+position = Vector2(-132.983, -113.396)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_3nx2q")
+
+[node name="Recipe Title" type="Label" parent="."]
+offset_left = -145.0
+offset_top = -128.0
+offset_right = 163.0
+offset_bottom = -105.0
+scale = Vector2(0.191217, 0.449605)
+theme_override_colors/font_color = Color(0.640306, 0.0292697, 0.0163941, 1)
+theme_override_fonts/font = ExtResource("10_6eob6")
+theme_override_font_sizes/font_size = 11
+text = "The Sense of Camraderie"

@@ -1,17 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://cy3r8ayri6jy5"]
+[gd_scene load_steps=8 format=3 uid="uid://cy3r8ayri6jy5"]
 
 [ext_resource type="Script" uid="uid://cnba1jd8bqdnb" path="res://scenes/interactable_manager.gd" id="1_uchck"]
+[ext_resource type="PackedScene" uid="uid://buplv00pgqthe" path="res://Visual Assets/Environment/Items/dayZeroItems.tscn" id="2_17612"]
 [ext_resource type="PackedScene" uid="uid://brcoyn0lqf18q" path="res://Visual Assets/Environment/Items/dayOneItems.tscn" id="2_qt635"]
+[ext_resource type="PackedScene" uid="uid://v73x3pmhcd2g" path="res://Visual Assets/Environment/Items/dayTwoItems.tscn" id="3_vngif"]
+[ext_resource type="PackedScene" uid="uid://b7i81hiq04hrm" path="res://Visual Assets/Environment/Items/dayThreeItems.tscn" id="4_17612"]
+[ext_resource type="PackedScene" uid="uid://bjnxatvlmiwyn" path="res://Visual Assets/Environment/Items/dayFourItems.tscn" id="5_14xh7"]
+[ext_resource type="PackedScene" uid="uid://cisq5wagogx5g" path="res://Visual Assets/Environment/Items/dayFiveItems.tscn" id="6_b8kke"]
 
 [node name="InteractableManager" type="Node2D"]
 script = ExtResource("1_uchck")
 
+[node name="DayZeroItems" parent="." instance=ExtResource("2_17612")]
+
 [node name="DayOneItems" parent="." instance=ExtResource("2_qt635")]
+visible = false
 
-[node name="DayFourItems" type="Node2D" parent="."]
+[node name="DayTwoItems" parent="." instance=ExtResource("3_vngif")]
+visible = false
 
-[node name="DayTwoItems" type="Node2D" parent="."]
+[node name="DayThreeItems" parent="." instance=ExtResource("4_17612")]
+visible = false
 
-[node name="DayThreeItems" type="Node2D" parent="."]
+[node name="DayFourItems" parent="." instance=ExtResource("5_14xh7")]
+visible = false
 
-[node name="DayFiveItems" type="Node2D" parent="."]
+[node name="DayFiveItems" parent="." instance=ExtResource("6_b8kke")]
+visible = false

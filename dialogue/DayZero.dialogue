@@ -1,0 +1,161 @@
+~ introCutscene
+set Player.canMove = false
+Mort: "..."
+Mort: "The bed feels less empty than it did yesterday."
+Mort: "Since when did I get so used to Harry not being here?"
+Mort: "..."
+Mort: "I need to get out of bed."
+Mort: "But I can't stop thinking about that book Harry left behind."
+Mort: "Can it really..?"
+Mort: "Ugh, I swear I'm going insane. I need to get out of the house..."
+Mort: "Even if I have to talk to those #######s."
+
+Press 'E' to interact. An item is interactable when an exclamation mark appears over your head.
+set Player.canMove = true
+=> END
+
+~ RyanDayZero
+set Player.canMove = false
+set NPC.tempElapTime = NPC.elapsedTime
+set NPC.tempCycProg = NPC.cycleProgress
+
+Ryan: "Well Howdy there, neighbor! How's your morning been?"
+Hostility, immediately.
+Mort: "Just dandy, Ryan. Just dandy."
+Mort: "Say, I know this is a longshot, but do you recognize this book?"
+I showed Ryan the book.
+Ryan: "Well, I don't particularly say I do, now. What's it about? Maybe I've heard from a friend about it."
+I can feel the malice dripping from his every word.
+Mort: "It seems like some recipe book, I was wondering if Harry had ever talked to you about it."
+Ryan: "Nosiree, not me. That Harry sure was a gem, though."
+A look of false pity falls over his expression.
+Ryan: "You know, Mort, if you ever need something, just let me know, okay?"
+Ryan: "Don't be a stranger, now."
+As if I would believe that.
+Mort: "Sure thing, Ryan. I'll see you around."
+set Player.dayZeroMarker += 1
+
+set NPC.elapsedTime = NPC.tempElapTime
+set NPC.cycleProgress = NPC.tempCycProg
+set NPC.isIdle = false
+set NPC.canMove = true
+set Player.canMove = true
+=> END
+
+~ JudithDayZero
+set Player.canMove = false
+set NPC.tempElapTime = NPC.elapsedTime
+set NPC.tempCycProg = NPC.cycleProgress
+
+Mort: "Good morning, Judith. You didn't have any trouble getting out of bed this morning, did you?"
+Though it would have been nice to know she had a bad morning, it's good she didnt.
+I needed to talk to her, and I sure as hell wasn't going inside her house.
+Judith: "Oh good morning to you too, Mort. I know I don't look it, but I'm still young and spry!"
+Judith: "Oh that reminds me!"
+Judith handed me a muffin.
+Judith: "I had extra this morning and you know how poorly muffins last."
+Judith: "I'd much rather have a young man like you eat his fill than have it go to waste."
+With a tight smile, I took the muffin and shoved it in my pocket.
+Mort: "Oh thanks Judith, this'll make me feel right as rain!"
+Mort: "By the way, speaking of young and old, you've seen a couple more years than me, do you recognize this book?"
+I showed Judith the book.
+Judith: "Let me put on my spectacles and take a look..."
+After a quick once-over...
+Judith: "Oh, I'm sorry Mort, I don't think I have. Then again, my memory isn't the best these days."
+Judith: "You and Harry take care now, won't you?"
+That horrid old woman.
+Mort: "Haha sure can do, Judith. See you around!"
+set Player.dayZeroMarker += 1
+
+set NPC.elapsedTime = NPC.tempElapTime
+set NPC.cycleProgress = NPC.tempCycProg
+set NPC.isIdle = false
+set NPC.canMove = true
+set Player.canMove = true
+=> END
+
+~ ChrisDayZero
+set Player.canMove = false
+set NPC.tempElapTime = NPC.elapsedTime
+set NPC.tempCycProg = NPC.cycleProgress
+
+Before I can even get a word out, Chris's boisterous voice hits me full force.
+Chris: "Hey Mr. Mort! I haven't seen you in a while!"
+Having jogged towards me at a fast pace, Chris seems to barely be breaking a sweat, like it was nothing to him.
+Mort: "Spry as ever, are we Chris? It's so early and you're already running all over the place."
+If he smiled any wider it'd look uncanny.
+Chris: "Of course I am! Gotta stay as healthy as I can so I can live as long as possible!"
+It wasn't long before Chris realized what he said.
+Chris: "Ah- sorry Mr. Mort, I didn't mean to-"
+Mort: "None taken. Anyways, you ever see this book on the web?"
+I showed Chris the book, which he seemed to take all too eagerly as a way out of the hole he dug himself.
+However, he appeared crestfallen soonafter.
+Chris: "Sorry, Mr. Mort. I've never been much of a reader, so I doubt I'd know about it."
+Chris: "Say, isn't necromancy that-"
+I yanked the book back away from him.
+Mort: "Thank you for your time, Chris. You can get back to... whatever you were doing before."
+Before he could even respond, I quickly took off.
+set Player.dayZeroMarker += 1
+
+set NPC.elapsedTime = NPC.tempElapTime
+set NPC.cycleProgress = NPC.tempCycProg
+set NPC.isIdle = false
+set NPC.canMove = true
+set Player.canMove = true
+=> END
+
+~ AgathaDayZero
+set Player.canMove = false
+set NPC.tempElapTime = NPC.elapsedTime
+set NPC.tempCycProg = NPC.cycleProgress
+
+Agatha: "Mortimer."
+Agatha nodded towards me curtly. She was always here, in front of her house, making sure the town was safe.
+She was always here.
+Mort: "Agatha."
+I nodded back. If you didn't deal with Agatha with caution, you wouldn't get much out of her.
+Mort: "I'll get straight to the point. Do you recognize this book at all?"
+I don't even need to offer it to her. She takes the book from me in one swift motion.
+Agatha: "Never seen this in my life, Mortimer. You're not getting into all that supernatural nonsense, now are you? I thought more of you."
+Her hardened expression melted into one of sympathy. It didn't fit her.
+Agatha: "You know all of us in the village are here for you, right? We're still a family."
+As Agatha spoke, she handed the book back to me.
+Mort: "Thank you Agatha, I'll try to keep that in mind."
+I turn and leave curtly, not seeing if she had any sort of reaction.
+set Player.dayZeroMarker += 1
+
+set NPC.elapsedTime = NPC.tempElapTime
+set NPC.cycleProgress = NPC.tempCycProg
+set NPC.isIdle = false
+set NPC.canMove = true
+set Player.canMove = true
+=> END
+
+~ AlreadyTalked
+set Player.canMove = false
+
+if !NPC.deathFlag 
+	I've already talked to them today, and once was more than I could bear.
+else
+	Please just go down quietly...
+
+set Player.canMove = true
+=> END
+
+~ EndOfDayZeroCutscene
+set Player.canMove = false
+
+if (Player.dayZeroMarker == 4):
+	I've talked to everyone today, and none of them recognized the book. If Harry hasn't showed it to any of them, maybe he meant to leave it for me...
+	Those #######s let him die, whether they'll admit it or not. If the recipes in this book are what it takes to bring him back, they can all rot.
+	Anything to bring Harry back...
+	From the Dead...
+	
+	set IM.dayCounter = 1
+	do IM.emit_signal("changeItems")
+	set Player.canMove = true
+else:
+	I haven't talked to everyone just yet, I still need to see if any of them recognize Harry's book.
+	set Player.canMove = true
+
+=> END

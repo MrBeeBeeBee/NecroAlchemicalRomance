@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=3 uid="uid://v73x3pmhcd2g"]
+
+[ext_resource type="PackedScene" uid="uid://bjstwrfmnh5r4" path="res://Visual Assets/Characters/Judith(HH).tscn" id="1_vo38b"]
+[ext_resource type="PackedScene" uid="uid://dqlx3fomrrs48" path="res://Visual Assets/Characters/Chris(AE).tscn" id="2_bkm1f"]
+[ext_resource type="PackedScene" uid="uid://bqmhsvf1liiv1" path="res://Visual Assets/Environment/Items/TornUpFamilyPhoto.tscn" id="2_jb1tn"]
+[ext_resource type="PackedScene" uid="uid://7eqvuv4idki1" path="res://Visual Assets/Characters/Agatha(LE).tscn" id="3_yxu2e"]
+[ext_resource type="PackedScene" uid="uid://by8wyxvvuswcm" path="res://Visual Assets/Environment/Items/bedtime.tscn" id="4_bkm1f"]
+[ext_resource type="PackedScene" uid="uid://d0wq7bxsik5hy" path="res://Visual Assets/Environment/Items/FamilyPhoto.tscn" id="5_yxu2e"]
+[ext_resource type="PackedScene" uid="uid://dlj7sadorturl" path="res://Visual Assets/Environment/Items/PeasInAPod.tscn" id="6_cfe4o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jb1tn"]
+size = Vector2(50, 25)
+
+[node name="DayTwoItems" type="Node2D"]
+
+[node name="FamilyPhoto" parent="." instance=ExtResource("5_yxu2e")]
+position = Vector2(36, -33)
+
+[node name="TornUpFamilyPhoto" parent="." instance=ExtResource("2_jb1tn")]
+
+[node name="PeasInAPod" parent="." instance=ExtResource("6_cfe4o")]
+
+[node name="Judith(HH)" parent="." instance=ExtResource("1_vo38b")]
+position = Vector2(975, 0)
+
+[node name="Chris(AE)" parent="." instance=ExtResource("2_bkm1f")]
+position = Vector2(1230, 0)
+
+[node name="Agatha(LE)" parent="." instance=ExtResource("3_yxu2e")]
+position = Vector2(1865, 0)
+
+[node name="Bedtime" parent="." instance=ExtResource("4_bkm1f")]
+
+[node name="KillZoneOne" type="Area2D" parent="." groups=["KillZones"]]
+position = Vector2(10, -10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZoneOne"]
+position = Vector2(15, -2.5)
+shape = SubResource("RectangleShape2D_jb1tn")

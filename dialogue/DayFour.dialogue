@@ -1,0 +1,56 @@
+~ AgathaDayFour
+set Player.canMove = false
+
+Agatha trembled behind the locked door. She might think she's safe behind it, but whether she'll admit it or now, we both know I'll get in eventually.
+I'm not exactly pressed for time. I have all day, and the closest city is hours away. 
+Agatha has a car out back, but I've long since slashed her tires. She doesn't travel enough to have notices.
+- Kill Her [if IM.inventory[11]]
+	It was time to finish this. Agatha was right behind that door, and the last victim I needed for the recipes.
+	Mort: "Agatha. Just let me in. I'll try to make it quick."
+	I didn't even need to see her to know she was furious.
+	Agatha: "So you aren't even trying to hide it? Goddamnit, Mortimer, you killed them all, didn't you?"
+	Agatha: "What kind of sick, twisted reason do you have for any of this? I don't even know what to think anymore. Did you ####ing kill Harry too?"
+	Oh that hag.
+	Mort: "DON'T YOU EVEN REMOTELY IMPLY I KILLED HARRY! I LOVED HIM! IT WAS YOU ALL WHO TOOK HIM AWAY FROM ME!"
+	I hear a heavy pounding from the other side of the door.
+	Agatha: "Are you seriously blaming us for that? It was an ACCIDENT, Mortimer! I thought you knew that!"
+	The heavy pounding stops as sounds of sobbing start.
+	Agatha: "I felt so horrible, thinking he wouldn't have died if I had been a better protector for you all. I still haven't come to terms with him being gone!"
+	Agatha: "I guess it goes to show that I was right, I really did a #### job of protecting everyone here. I couldn't even protect us against one of our own."
+	As the sobbing slowly subsided, the door unlocked.
+	Agatha: "Just kill me, Mortimer. I can't bear to drag this out any longer."
+	Agatha: "Whatever your twisted reasons are, just know this."
+	Agatha: "Harry would have hated who you've become."
+	...
+	...
+	...
+	set NPC.deathFlag = true
+	set Player.canMove = true
+	
+- Don't Kill Her
+	She wasn't going anywhere. I might as well get what I need before I end it. 
+	Besides, having her tremble inside her house, suffering all the while, was music to my ears.
+	Be still, my heart. Fortune yet awaits.
+	set Player.canMove = true
+	
+	set NPC.conversationsHad -= 1
+
+=> END
+
+~ EndOfDayFourCutscene
+set Player.canMove = false
+
+if (IM.inventory[11] && IM.inventory[12] && IM.inventory[13]):
+	They're all gone now. I've gathered everything I need for tonight's recipe, and everyone else in the village is dead by my hand.
+	Now there's nothing to stop me from bringing back Harry from the dead.
+	One last recipe, and this nightmare will all be over.
+	Anything for you, Harry...
+	set IM.dayCounter = 5
+	do IM.emit_signal("changeItems")
+	set Player.canMove = true
+else:
+	I haven't gathered all of the components for today's recipe yet.
+	The book was very specific about what I needed. I'm running out of time, so I can't sleep yet.
+	set Player.canMove = true
+
+=> END

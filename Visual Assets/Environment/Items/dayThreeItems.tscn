@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://b7i81hiq04hrm"]
+
+[ext_resource type="PackedScene" uid="uid://dqlx3fomrrs48" path="res://Visual Assets/Characters/Chris(AE).tscn" id="1_0b8yt"]
+[ext_resource type="PackedScene" uid="uid://7eqvuv4idki1" path="res://Visual Assets/Characters/Agatha(LE).tscn" id="2_rapvr"]
+[ext_resource type="PackedScene" uid="uid://by8wyxvvuswcm" path="res://Visual Assets/Environment/Items/bedtime.tscn" id="3_rapvr"]
+[ext_resource type="PackedScene" uid="uid://dgx14dl6f3s7f" path="res://Visual Assets/Environment/Items/WrittenPlan.tscn" id="4_35w4d"]
+[ext_resource type="PackedScene" uid="uid://bn36nytnlms3r" path="res://Visual Assets/Environment/Items/EssenceOfExcitement.tscn" id="5_g3cij"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_35w4d"]
+size = Vector2(50, 25)
+
+[node name="DayThreeItems" type="Node2D"]
+
+[node name="Chris(AE)" parent="." instance=ExtResource("1_0b8yt")]
+position = Vector2(1230, 0)
+
+[node name="Agatha(LE)" parent="." instance=ExtResource("2_rapvr")]
+position = Vector2(1865, 0)
+
+[node name="Bedtime" parent="." instance=ExtResource("3_rapvr")]
+
+[node name="WrittenPlan" parent="." instance=ExtResource("4_35w4d")]
+
+[node name="EssenceOfExcitement" parent="." instance=ExtResource("5_g3cij")]
+
+[node name="KillZoneOne" type="Area2D" parent="." groups=["KillZones"]]
+position = Vector2(10, -10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZoneOne"]
+position = Vector2(15, -2.5)
+shape = SubResource("RectangleShape2D_35w4d")

@@ -24,7 +24,11 @@ func _ready() -> void:
 	downstairs_door_location = $HouseInterior/DownstairsDoor.global_position
 	
 	upstairs_door_location = $HouseInterior/UpstairsDoor.global_position
-	ready_to_teleport = false
+	ready_to_teleport = true
+	$HouseInterior/DownstairsDoor.set_deferred("monitoring", true)
+	$HouseInterior/DownstairsDoor.set_deferred("monitorable", true)
+	$HouseInterior/UpstairsDoor.set_deferred("monitoring", true)
+	$HouseInterior/UpstairsDoor.set_deferred("monitorable", true)
 
 func UseDoor(sender):
 	if(sender.name == "FrontDoor"):

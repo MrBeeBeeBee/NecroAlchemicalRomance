@@ -1,0 +1,108 @@
+[gd_scene load_steps=9 format=3 uid="uid://dqg60eaftu2u8"]
+
+[ext_resource type="Texture2D" uid="uid://clewkmelk1g4f" path="res://Visual Assets/UI/Equals.png" id="1_0scau"]
+[ext_resource type="Texture2D" uid="uid://ciebk2rc11n4p" path="res://Visual Assets/UI/RecipeBG.png" id="1_t0c4q"]
+[ext_resource type="Texture2D" uid="uid://c3bxvcnvvqule" path="res://Visual Assets/UI/Check.png" id="2_dibrx"]
+[ext_resource type="Texture2D" uid="uid://cgq5m371a5xho" path="res://Visual Assets/UI/MortIcon.png" id="3_wufhg"]
+[ext_resource type="Texture2D" uid="uid://dt04odgnohbdm" path="res://Visual Assets/Environment/Items/SpiritWithDesire.png" id="4_p1v50"]
+[ext_resource type="Texture2D" uid="uid://b6gw2s1p1g0t7" path="res://Visual Assets/Environment/Items/ReasonForLiving.png" id="5_jdlks"]
+[ext_resource type="Texture2D" uid="uid://cil7oeilno4va" path="res://Visual Assets/Environment/Items/AchingHeart.png" id="6_3a686"]
+[ext_resource type="FontFile" uid="uid://8kktrg8im3vb" path="res://Visual Assets/UI/PressStart2P.ttf" id="7_dibrx"]
+
+[node name="Recipe5" type="Node2D"]
+
+[node name="RecipeImage" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_left = 1.225
+anchor_top = 1.05
+anchor_right = 1.225
+anchor_bottom = 1.05
+offset_left = -146.0
+offset_top = -138.0
+offset_right = -86.0
+offset_bottom = -86.0
+scale = Vector2(1.02457, 1.06926)
+texture = ExtResource("1_t0c4q")
+metadata/_edit_use_anchors_ = true
+
+[node name="Line1" type="Node2D" parent="."]
+scale = Vector2(0.819653, 0.855406)
+
+[node name="Equals" type="Sprite2D" parent="Line1"]
+position = Vector2(-144.523, -135.608)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("1_0scau")
+
+[node name="Check" type="Sprite2D" parent="Line1"]
+visible = false
+position = Vector2(-120.783, -136.777)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_dibrx")
+
+[node name="MortIcon" type="Sprite2D" parent="Line1"]
+position = Vector2(-156.164, -136.777)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_wufhg")
+
+[node name="SpiritWithDesire" type="Sprite2D" parent="Line1"]
+position = Vector2(-133, -136)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_p1v50")
+
+[node name="Line2" type="Node2D" parent="."]
+scale = Vector2(0.819653, 0.855406)
+
+[node name="Equals" type="Sprite2D" parent="Line2"]
+position = Vector2(-144.523, -123.918)
+scale = Vector2(0.624655, 0.625434)
+texture = ExtResource("1_0scau")
+
+[node name="Check" type="Sprite2D" parent="Line2"]
+visible = false
+position = Vector2(-120.783, -125.087)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_dibrx")
+
+[node name="MortIcon" type="Sprite2D" parent="Line2"]
+position = Vector2(-156.164, -125.087)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_wufhg")
+
+[node name="ReasonForLiving" type="Sprite2D" parent="Line2"]
+position = Vector2(-132.983, -123.918)
+texture = ExtResource("5_jdlks")
+
+[node name="Line3" type="Node2D" parent="."]
+scale = Vector2(0.819653, 0.855406)
+
+[node name="Equals" type="Sprite2D" parent="Line3"]
+position = Vector2(-144.523, -112.227)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("1_0scau")
+
+[node name="Check" type="Sprite2D" parent="Line3"]
+visible = false
+position = Vector2(-120.783, -113.396)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_dibrx")
+
+[node name="MortIcon" type="Sprite2D" parent="Line3"]
+position = Vector2(-156.164, -113.396)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_wufhg")
+
+[node name="AchingHeart" type="Sprite2D" parent="Line3"]
+position = Vector2(-132.983, -113)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_3a686")
+
+[node name="Recipe Title" type="Label" parent="."]
+offset_left = -136.0
+offset_top = -127.0
+offset_right = 172.0
+offset_bottom = -104.0
+scale = Vector2(0.188944, 0.498175)
+theme_override_colors/font_color = Color(0.640306, 0.0292697, 0.0163941, 1)
+theme_override_fonts/font = ExtResource("7_dibrx")
+theme_override_font_sizes/font_size = 11
+text = "Fondness For the Past"

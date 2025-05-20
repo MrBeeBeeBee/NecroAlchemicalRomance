@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cisq5wagogx5g"]
+
+[ext_resource type="PackedScene" uid="uid://by8wyxvvuswcm" path="res://Visual Assets/Environment/Items/bedtime.tscn" id="1_gr5pd"]
+
+[node name="DayFiveItems" type="Node2D"]
+
+[node name="Bedtime" parent="." instance=ExtResource("1_gr5pd")]

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://go464yrdtwe6"
+path="res://.godot/imported/DayZero.dialogue-2fe569b95293d0b54c5c6f19b0bd4573.tres"
+
+[deps]
+
+source_file="res://dialogue/DayZero.dialogue"
+dest_files=["res://.godot/imported/DayZero.dialogue-2fe569b95293d0b54c5c6f19b0bd4573.tres"]
+
+[params]
+
+defaults=true

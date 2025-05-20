@@ -1,0 +1,221 @@
+[gd_scene load_steps=17 format=3 uid="uid://dqlx3fomrrs48"]
+
+[ext_resource type="Script" uid="uid://cqrgy677c5nc5" path="res://Visual Assets/Environment/Items/interactableItem.gd" id="1_ppy6g"]
+[ext_resource type="Texture2D" uid="uid://ij5rae3mnb3t" path="res://Visual Assets/Characters/ChrisDead.png" id="2_qc3kj"]
+[ext_resource type="Texture2D" uid="uid://od1oiectrbvq" path="res://Visual Assets/Characters/ChrisFront.png" id="3_ijfgf"]
+[ext_resource type="Texture2D" uid="uid://b0sntiby31i6v" path="res://Visual Assets/Characters/ChrisLeftOne.png" id="4_mpfls"]
+[ext_resource type="Texture2D" uid="uid://2nxe5wvd8aml" path="res://Visual Assets/Characters/ChrisLeftTwo.png" id="5_tsrbs"]
+[ext_resource type="Texture2D" uid="uid://bmwhuk6fpmoca" path="res://Visual Assets/Characters/ChrisLeftThree.png" id="6_rsb3s"]
+[ext_resource type="Texture2D" uid="uid://wr2t7pi7wf33" path="res://Visual Assets/Characters/ChrisRightOne.png" id="7_ps8ve"]
+[ext_resource type="Texture2D" uid="uid://bnqkexy58g4cg" path="res://Visual Assets/Characters/ChrisRightTwo.png" id="8_j8fl7"]
+[ext_resource type="Texture2D" uid="uid://didpcemriq0up" path="res://Visual Assets/Characters/ChrisRightThree.png" id="9_fi58m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tq1c"]
+size = Vector2(12, 25)
+
+[sub_resource type="Animation" id="Animation_rs1b0"]
+resource_name = "Dead"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Dead"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D/AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_d4p17"]
+resource_name = "Idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D/AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_0i0lq"]
+resource_name = "Walk Left"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Walk Left"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D/AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.401068, 0.598133),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_irb7v"]
+resource_name = "Walk Right"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Walk Right"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D/AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.202616, 0.402456, 0.599521),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wybfy"]
+_data = {
+&"Dead": SubResource("Animation_rs1b0"),
+&"Idle": SubResource("Animation_d4p17"),
+&"Walk Left": SubResource("Animation_0i0lq"),
+&"Walk Right": SubResource("Animation_irb7v")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2164t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qc3kj")
+}],
+"loop": true,
+"name": &"Dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ijfgf")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mpfls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tsrbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rsb3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tsrbs")
+}],
+"loop": true,
+"name": &"Walk Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ps8ve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j8fl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fi58m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j8fl7")
+}],
+"loop": true,
+"name": &"Walk Right",
+"speed": 5.0
+}]
+
+[node name="Chris(AE)" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_ppy6g")
+itemIndexRequired = 8
+itemIndex = 10
+NPCStatus = true
+dayZeroDialogue = "ChrisDayZero"
+dayOneDialogue = "ChrisDayOne"
+dayTwoDialogue = "ChrisDayTwo"
+dayThreeDialogue = "ChrisDayThree"
+locationA = Vector2(1230, 0)
+locationB = Vector2(1130, 0)
+walkCycleTimer = 4.0
+idleTimer = 2.0
+deathLocation = Vector2(25, 0)
+deathWalkTimer = 4.0
+disappearingCoordinates = Vector2(83, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -12.5)
+shape = SubResource("RectangleShape2D_5tq1c")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Area2D"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_wybfy")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_2164t")
+animation = &"Walk Right"
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]

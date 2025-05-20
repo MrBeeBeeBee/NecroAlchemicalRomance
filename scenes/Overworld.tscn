@@ -1,15 +1,18 @@
-[gd_scene load_steps=13 format=4 uid="uid://crxpt35xyuw01"]
+[gd_scene load_steps=17 format=4 uid="uid://crxpt35xyuw01"]
 
 [ext_resource type="Texture2D" uid="uid://d3ij2d2dotud" path="res://Visual Assets/Tiles/BasicPathSprite.png" id="1_0n4wa"]
+[ext_resource type="Script" uid="uid://pho7mn74f21k" path="res://scenes/overworld.gd" id="1_i5y0i"]
 [ext_resource type="PackedScene" uid="uid://ejhcfpac0fpt" path="res://Interactables/House.tscn" id="2_m38k2"]
 [ext_resource type="PackedScene" uid="uid://lle5s165ywws" path="res://Visual Assets/Environment/Houses/NPCHouses.tscn" id="8_0n4wa"]
-[ext_resource type="Texture2D" uid="uid://pp871wvl3q37" path="res://Visual Assets/Characters/AgathaFront.png" id="8_dysil"]
 [ext_resource type="PackedScene" uid="uid://br7q2a76ljose" path="res://Player/player.tscn" id="9_0n4wa"]
-[ext_resource type="Texture2D" uid="uid://od1oiectrbvq" path="res://Visual Assets/Characters/ChrisFront.png" id="9_8wcqk"]
-[ext_resource type="Texture2D" uid="uid://tjmqcsxyxrr2" path="res://Visual Assets/Characters/JudithFront.png" id="10_667vx"]
+[ext_resource type="PackedScene" uid="uid://th7pvtfroola" path="res://Visual Assets/UI/recipe1.tscn" id="9_8xaq6"]
+[ext_resource type="Script" uid="uid://cqrgy677c5nc5" path="res://Visual Assets/Environment/Items/interactableItem.gd" id="9_dysil"]
+[ext_resource type="PackedScene" uid="uid://bkfu8kafefyb3" path="res://Visual Assets/UI/recipe2.tscn" id="10_dysil"]
+[ext_resource type="PackedScene" uid="uid://b5is3vpqd71sv" path="res://Visual Assets/UI/recipe3.tscn" id="11_8wcqk"]
 [ext_resource type="PackedScene" uid="uid://cy3r8ayri6jy5" path="res://scenes/InteractableManager.tscn" id="11_m38k2"]
-[ext_resource type="Texture2D" uid="uid://do14so1vvpawp" path="res://Visual Assets/Characters/RyanFront.png" id="11_ojbe6"]
+[ext_resource type="PackedScene" uid="uid://cct2ln0ho8mf0" path="res://Visual Assets/UI/recipe4.tscn" id="12_667vx"]
 [ext_resource type="PackedScene" uid="uid://c2aogeaagix6c" path="res://Visual Assets/Environment/BG/Paralax BG.tscn" id="12_ff6um"]
+[ext_resource type="PackedScene" uid="uid://dqg60eaftu2u8" path="res://Visual Assets/UI/recipe5.tscn" id="13_ojbe6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4vb1v"]
 texture = ExtResource("1_0n4wa")
@@ -22,7 +25,11 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_4vb1v")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wcqk"]
+size = Vector2(5.85612, 5.61136)
+
 [node name="Overworld" type="Node2D"]
+script = ExtResource("1_i5y0i")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAEAAAAAAAAAAAAAAADAAAAAAAAAAAAAAACAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAD+/wAAAAAAAAAAAAD9/wAAAAAAAAAAAAD8/wAAAAAAAAAAAAD7/wAAAAAAAAAAAAAFAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAJAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAALAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAANAAAAAAAAAAAAAAAOAAAAAAAAAAAAAAAPAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAARAAAAAAAAAAAAAAASAAAAAAAAAAAAAAATAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAVAAAAAAAAAAAAAAAWAAAAAAAAAAAAAAAXAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAZAAAAAAAAAAAAAAAaAAAAAAAAAAAAAAAbAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAdAAAAAAAAAAAAAAAeAAAAAAAAAAAAAAAfAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAhAAAAAAAAAAAAAAAiAAAAAAAAAAAAAAAjAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAlAAAAAAAAAAAAAAAmAAAAAAAAAAAAAAAnAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAApAAAAAAAAAAAAAAAqAAAAAAAAAAAAAAArAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAAtAAAAAAAAAAAAAAAuAAAAAAAAAAAAAAAvAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAxAAAAAAAAAAAAAAAyAAAAAAAAAAAAAAAzAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA1AAAAAAAAAAAAAAA2AAAAAAAAAAAAAAA3AAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA5AAAAAAAAAAAAAAA6AAAAAAAAAAAAAAD6/wAAAAAAAAAAAAD5/wAAAAAAAAAAAAD4/wAAAAAAAAAAAAD1////AAAAAAAAAAD2/wAAAAAAAAAAAAD3/wAAAAAAAAAAAAA7AAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA9AAAAAAAAAAAAAAA+AAAAAAAAAAAAAAA/AAAAAAAAAAAAAABAAAAAAAAAAAAAAABBAP//AAAAAAAAAABBAAAAAAAAAAAAAAD1/wAAAAAAAAAAAAA=")
@@ -30,31 +37,68 @@ tile_set = SubResource("TileSet_gv2ww")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("12_ff6um")]
 
+[node name="FadeToBlack" type="CanvasModulate" parent="ParallaxBackground"]
+
 [node name="House" parent="." instance=ExtResource("2_m38k2")]
 position = Vector2(-41, 0)
 
-[node name="InteractableManager" parent="." instance=ExtResource("11_m38k2")]
-
-[node name="Temporary NPC Node" type="Node2D" parent="."]
-
-[node name="AgathaFront" type="Sprite2D" parent="Temporary NPC Node"]
-position = Vector2(1687, -16)
-texture = ExtResource("8_dysil")
-
-[node name="ChrisFront" type="Sprite2D" parent="Temporary NPC Node"]
-position = Vector2(1231, -16)
-texture = ExtResource("9_8wcqk")
-
-[node name="JudithFront" type="Sprite2D" parent="Temporary NPC Node"]
-position = Vector2(791, -16)
-texture = ExtResource("10_667vx")
-
-[node name="RyanFront" type="Sprite2D" parent="Temporary NPC Node"]
-visible = false
-position = Vector2(354, -16)
-texture = ExtResource("11_ojbe6")
-
 [node name="NpcHouses" parent="." instance=ExtResource("8_0n4wa")]
 
+[node name="InteractableManager" parent="." instance=ExtResource("11_m38k2")]
+
 [node name="Player" parent="." instance=ExtResource("9_0n4wa")]
-position = Vector2(-60, 0)
+position = Vector2(50, -53)
+
+[node name="FadeToBlack" type="CanvasModulate" parent="."]
+
+[node name="Recipe" type="CanvasLayer" parent="."]
+layer = 2
+follow_viewport_enabled = true
+
+[node name="Control" type="Control" parent="Recipe"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Recipe"]
+offset_right = 40.0
+offset_bottom = 40.0
+patch_margin_left = 10
+patch_margin_top = 10
+
+[node name="Recipe1" parent="Recipe/NinePatchRect" instance=ExtResource("9_8xaq6")]
+visible = false
+position = Vector2(49, 43)
+
+[node name="Recipe2" parent="Recipe/NinePatchRect" instance=ExtResource("10_dysil")]
+visible = false
+position = Vector2(49, 43)
+scale = Vector2(0.983599, 0.97741)
+
+[node name="Recipe3" parent="Recipe/NinePatchRect" instance=ExtResource("11_8wcqk")]
+visible = false
+position = Vector2(49, 43)
+scale = Vector2(0.992018, 0.986609)
+
+[node name="Recipe4" parent="Recipe/NinePatchRect" instance=ExtResource("12_667vx")]
+visible = false
+position = Vector2(49, 43)
+scale = Vector2(0.99131, 0.976501)
+
+[node name="Recipe5" parent="Recipe/NinePatchRect" instance=ExtResource("13_ojbe6")]
+visible = false
+position = Vector2(49, 43)
+scale = Vector2(1.02831, 0.985009)
+
+[node name="Area2D" type="Area2D" parent="Recipe/NinePatchRect" groups=["AccessibleItem"]]
+position = Vector2(-101, -95)
+scale = Vector2(1.02457, 1.06926)
+script = ExtResource("9_dysil")
+itemIndex = 17
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Recipe/NinePatchRect/Area2D"]
+position = Vector2(28.3046, 25.2511)
+shape = SubResource("RectangleShape2D_8wcqk")

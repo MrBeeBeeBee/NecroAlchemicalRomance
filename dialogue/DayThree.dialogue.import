@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cityop0gpeo5g"
+path="res://.godot/imported/DayThree.dialogue-d8b6eac2125bf7525107181c9bb17019.tres"
+
+[deps]
+
+source_file="res://dialogue/DayThree.dialogue"
+dest_files=["res://.godot/imported/DayThree.dialogue-d8b6eac2125bf7525107181c9bb17019.tres"]
+
+[params]
+
+defaults=true

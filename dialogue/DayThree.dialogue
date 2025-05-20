@@ -1,0 +1,90 @@
+~ ChrisDayThree
+set Player.canMove = false
+set NPC.tempElapTime = NPC.elapsedTime
+set NPC.tempCycProg = NPC.cycleProgress
+
+Though I approached him, it was almost as if Chris had sought me out.
+Chris: "Mr. Mort! Do you want me to come over to get those ingredients now?"
+- Kill Him [if IM.inventory[8]]
+	Everything was in place. Agatha was bound to notice soon, so I had to act quickly.
+	Mort: "Of course, Chris! Head on over whenever you can and I'll be right over."
+	Mort: "Make yourself at home while you're waiting, I won't be long! Do mind the stains on the carpet though, I spilled some cranberry juice and it won't come out."
+	Chris seemed puzzled when I said this. ####. I didn't mess up, did I?
+	Chris: "Dang, Mr. Mort. I always pictured you as the careful and meticulous type."
+	I chuckled as I felt more relief in that moment than ever before in my life. I was so close, I couldn't blow it now.
+	Mort: "Chris you really know how to inflate a guy's ego. I can be like that when I want to be, but I'm still human."
+	Mort: "Now head on over, I'll be back at the house in just a second."
+
+	set NPC.canBeKilled = true
+	set NPC.elapsedTime = 0
+	set NPC.cycleProgress = 0
+	set NPC.currentLocation = NPC.get_parent().position
+	set NPC.isIdle = false
+	
+	Chris nodded as he sped along towards my house. It was hard to keep an eye on him.
+	
+- Don't Kill Him
+	Not everything was ready yet. I couldn't let Chris go over before I was done, or else I wouldn't get another chance. 
+	After I was done with him, everything I needed to do was inside the house. It would be better to have everything handled before then.
+	Mort: "Not just yet, Chris. I still have a few errands I need to run, but I'll cicle back to you when I'm free, okay?"
+	Chris nodded, clearly impatient, but too polite to raise any objections as I slinked away.
+	
+	set NPC.conversationsHad -= 1
+
+	set NPC.elapsedTime = NPC.tempElapTime
+	set NPC.cycleProgress = NPC.tempCycProg
+	set NPC.isIdle = false
+	set NPC.canMove = true
+	set Player.canMove = true
+
+=> END
+
+~ AgathaDayThree
+set Player.canMove = false
+set NPC.tempElapTime = NPC.elapsedTime
+set NPC.tempCycProg = NPC.cycleProgress
+
+Agatha seemed almost frantic, approaching me and speaking before I could even comprehend was was going on.
+Agatha: "Mort... Something's up. I haven't seen Judith all day and when I knocked, she didn't answer. Ryan still isn't back from the city, either."
+Mort: "Agatha, slow down, take a deep breath. Tell me what's going on slowly, okay?"
+Agatha did a breathing exercise... and then another... and then three more before finally pulling out her inhaler and solving the actual problem.
+Agatha: "I just... I usually know where everyone is and how everyone's doing and last time I didn't know where someone was, Harry-"
+She stopped dead in her tracks, the both of us silent as a mouse. She didn't need to tell me what happened last time. Everyone here was at fault, but her most of all.
+There was a reason I didn't trust in her ability to keep everyone safe.
+There was a reason she was the last to go.
+Mort: "I know you're worried, Agatha, but worrying like that isn't going to get us anywhere. No sense in going crazy. Ryan can handle himself and Judith can't get that far, I'm sure she's just sleeping in today, yeah?"
+That seemed to calm Agatha down enough, but not completely. In fact, my calmness seemed to unease her.
+I messed up, I reacted too calmly when she mentioned Harry. I thought tempering my reaction would assuade her anxiety but I only made her more suspicious.
+Mort: "You're not the only one looking, okay? If we don't see them again by tomorrow, we'll go to the city and get some help, you and I, okay?"
+Agatha looked at me with that same patient gaze, as if she was analyzing me. She had her moments of weakness, but damn she recovered quick.
+Too quick for her own good.
+Agatha: "Alright, Mortimer. I'll give it one more day. But just one. I know I get antsy but I always have cause."
+Taking that as a sign to get out of here before I revealed my actions to any greater extent, I simply nodded as I took my leave. Just like I usually did with Agatha.
+
+set NPC.elapsedTime = NPC.tempElapTime
+set NPC.cycleProgress = NPC.tempCycProg
+set NPC.isIdle = false
+set NPC.canMove = true
+set Player.canMove = true
+
+=> END
+
+~ EndOfDayThreeCutscene
+set Player.canMove = false
+
+if (IM.inventory[8] && IM.inventory[9] && IM.inventory[10]):
+	I've gathered all the items I need for today's recipe.
+	If I'm being honest, I know that Chris didn't deserve this.
+	He's the least responsible for what happened that day, but at this point, I can't leave anyone in the village alive.
+	Tomorrow, though, that's another story.
+	Agatha's going to pay for letting Harry die...
+	
+	set IM.dayCounter = 4
+	do IM.emit_signal("changeItems")
+	set Player.canMove = true
+else:
+	I haven't gathered all of the components for today's recipe yet.
+	The book was very specific about what I needed. I'm running out of time, so I can't sleep yet.
+	set Player.canMove = true
+
+=> END

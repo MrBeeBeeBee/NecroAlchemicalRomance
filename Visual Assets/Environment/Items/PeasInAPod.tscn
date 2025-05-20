@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlj7sadorturl"]
+
+[ext_resource type="Script" uid="uid://cqrgy677c5nc5" path="res://Visual Assets/Environment/Items/interactableItem.gd" id="2_wf44p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gig7p"]
+size = Vector2(20, 34)
+
+[node name="PeasInAPod" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="." groups=["AccessibleItem"]]
+position = Vector2(6, -16)
+script = ExtResource("2_wf44p")
+itemIndex = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_gig7p")

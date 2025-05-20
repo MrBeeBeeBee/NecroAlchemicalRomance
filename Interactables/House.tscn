@@ -67,6 +67,7 @@ position = Vector2(46, -71)
 texture = ExtResource("8_jshkp")
 
 [node name="HouseExterior" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("2_5oxo7")
 centered = false
 offset = Vector2(0, -128)
@@ -86,7 +87,6 @@ scale = Vector2(-0.322921, 4.72661)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left Wall"]
 shape = SubResource("RectangleShape2D_5oxo7")
-disabled = true
 
 [node name="Right Wall" type="StaticBody2D" parent="."]
 position = Vector2(121, -48)
@@ -94,7 +94,6 @@ scale = Vector2(-0.322921, 4.72661)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Right Wall"]
 shape = SubResource("RectangleShape2D_5oxo7")
-disabled = true
 
 [node name="Upper Floor" type="StaticBody2D" parent="."]
 position = Vector2(64, -47)

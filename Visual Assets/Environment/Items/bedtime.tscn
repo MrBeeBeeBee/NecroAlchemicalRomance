@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://by8wyxvvuswcm"]
+
+[ext_resource type="Script" uid="uid://ihqfd3ht84nd" path="res://Visual Assets/Environment/Items/bedtime.gd" id="1_1omef"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_750e2"]
+size = Vector2(50, 25)
+
+[node name="Bedtime" type="Area2D"]
+script = ExtResource("1_1omef")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(67, -63)
+scale = Vector2(0.339188, -0.747658)
+shape = SubResource("RectangleShape2D_750e2")

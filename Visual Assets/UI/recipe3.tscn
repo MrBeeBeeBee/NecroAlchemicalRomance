@@ -1,0 +1,121 @@
+[gd_scene load_steps=11 format=3 uid="uid://b5is3vpqd71sv"]
+
+[ext_resource type="Texture2D" uid="uid://ciebk2rc11n4p" path="res://Visual Assets/UI/RecipeBG.png" id="1_hcvhr"]
+[ext_resource type="Texture2D" uid="uid://qt0kveuboyh" path="res://Visual Assets/UI/Plus.png" id="1_uhcym"]
+[ext_resource type="Texture2D" uid="uid://clewkmelk1g4f" path="res://Visual Assets/UI/Equals.png" id="2_37qk5"]
+[ext_resource type="Texture2D" uid="uid://c3bxvcnvvqule" path="res://Visual Assets/UI/Check.png" id="3_gm2b0"]
+[ext_resource type="Texture2D" uid="uid://b8n7damiqnk7o" path="res://Visual Assets/Environment/Items/EssenseOfExcitement.png" id="4_mvowu"]
+[ext_resource type="Texture2D" uid="uid://b8cwj6x24la52" path="res://Visual Assets/Environment/Items/AssuredEyes.png" id="5_uq0v5"]
+[ext_resource type="Texture2D" uid="uid://dla5vjsysqnpv" path="res://Visual Assets/Environment/Items/EssenceExtractor.png" id="6_xhid2"]
+[ext_resource type="Texture2D" uid="uid://djqwsaln84fet" path="res://Visual Assets/UI/ChrisIcon.png" id="7_8dlmo"]
+[ext_resource type="Texture2D" uid="uid://6frh4l5pyb8q" path="res://Visual Assets/Environment/Items/WrittenPlan.png" id="8_w5crg"]
+[ext_resource type="FontFile" uid="uid://8kktrg8im3vb" path="res://Visual Assets/UI/PressStart2P.ttf" id="9_37qk5"]
+
+[node name="Recipe3" type="Node2D"]
+
+[node name="RecipeImage" type="TextureRect" parent="."]
+anchors_preset = -1
+anchor_left = 1.225
+anchor_top = 1.05
+anchor_right = 1.225
+anchor_bottom = 1.05
+offset_left = -151.0
+offset_top = -138.0
+offset_right = -91.0
+offset_bottom = -86.0
+scale = Vector2(1.02457, 1.06926)
+texture = ExtResource("1_hcvhr")
+metadata/_edit_use_anchors_ = true
+
+[node name="Line2" type="Node2D" parent="."]
+scale = Vector2(0.819653, 0.855406)
+
+[node name="Plus" type="Sprite2D" parent="Line2"]
+position = Vector2(-161.977, -136.207)
+scale = Vector2(0.512283, 0.534629)
+texture = ExtResource("1_uhcym")
+
+[node name="Equals2" type="Sprite2D" parent="Line2"]
+position = Vector2(-144.523, -135.608)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("2_37qk5")
+
+[node name="Check" type="Sprite2D" parent="Line2"]
+visible = false
+position = Vector2(-120.783, -136.777)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_gm2b0")
+
+[node name="EssenseOfExcitement" type="Sprite2D" parent="Line2"]
+position = Vector2(-131.977, -136.207)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("4_mvowu")
+
+[node name="AssuredEyes" type="Sprite2D" parent="Line2"]
+position = Vector2(-172.024, -136.777)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_uq0v5")
+
+[node name="EssenceExtractor" type="Sprite2D" parent="Line2"]
+position = Vector2(-153.724, -136.777)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("6_xhid2")
+
+[node name="Line3" type="Node2D" parent="."]
+scale = Vector2(0.819653, 0.855406)
+
+[node name="ChrisIcon" type="Sprite2D" parent="Line3"]
+position = Vector2(-154.374, -125.087)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("7_8dlmo")
+
+[node name="Equals" type="Sprite2D" parent="Line3"]
+position = Vector2(-144.523, -123.918)
+scale = Vector2(0.624655, 0.625434)
+texture = ExtResource("2_37qk5")
+
+[node name="Check" type="Sprite2D" parent="Line3"]
+visible = false
+position = Vector2(-120.783, -125.087)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_gm2b0")
+
+[node name="AssuredEyes" type="Sprite2D" parent="Line3"]
+position = Vector2(-131.763, -125.087)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_uq0v5")
+
+[node name="Line1" type="Node2D" parent="."]
+scale = Vector2(0.819653, 0.855406)
+
+[node name="WrittenPlan" type="Sprite2D" parent="Line1"]
+position = Vector2(-154.284, -113.396)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_w5crg")
+
+[node name="Equals" type="Sprite2D" parent="Line1"]
+position = Vector2(-144.523, -112.227)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("2_37qk5")
+
+[node name="Check" type="Sprite2D" parent="Line1"]
+visible = false
+position = Vector2(-120.783, -113.396)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_gm2b0")
+
+[node name="WrittenPlan2" type="Sprite2D" parent="Line1"]
+position = Vector2(-131.763, -113.396)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_w5crg")
+
+[node name="Recipe Title" type="Label" parent="."]
+offset_left = -145.0
+offset_top = -128.0
+offset_right = 163.0
+offset_bottom = -105.0
+scale = Vector2(0.195159, 0.478454)
+theme_override_colors/font_color = Color(0.640306, 0.0292697, 0.0163941, 1)
+theme_override_fonts/font = ExtResource("9_37qk5")
+theme_override_font_sizes/font_size = 11
+text = "Optimism For the Future"

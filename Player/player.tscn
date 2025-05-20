@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cvye6b5dd5u1p" path="res://Visual Assets/Characters/PlayerRightThree.png" id="8_dv3j0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lfmf2"]
-radius = 7.96703
+radius = 5.69074
 height = 46.8135
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pisgm"]
@@ -200,9 +200,13 @@ autoplay = "Player Walk Left"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -55.705)
+scale = Vector2(inf_neg, -28.4155)
 zoom = Vector2(3.63, 3.63)
 limit_left = -320
+limit_top = -166
 limit_right = 2080
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
+[connection signal="area_shape_exited" from="Area2D" to="." method="_on_area_2d_area_shape_exited"]
