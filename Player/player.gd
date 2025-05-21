@@ -8,23 +8,8 @@ const SPEED = 75.0
 @export() var hasUnmarkedCalendar = false
 @export() var hasBareFeet = false
 var canMove = true
-var dayZeroMarker = 4
+var dayZeroMarker = 0
 var InteractableManager
-#var checkOne
-#var checkTwo
-#var checkThree
-#var checkFour
-#var checkFive
-#var checkSix
-#var checkSeven
-#var checkEight
-#var checkNine
-#var checkTen
-#var checkEleven
-#var checkTwelve
-#var checkThirteen
-#var checkFourteen
-#var checkFifteen
 var checks := []
 
 func _ready():
@@ -36,21 +21,6 @@ func _ready():
 		for j in range(3):
 			var path = "Recipe%d/Line%d/Check" % [i + 1, j + 1]
 			checks.append(recipe_root.get_node(path))
-	#checkOne  = get_node("/root/Overworld/Player/Recipe/RecipeOne/LineOne/Check")
-	#checkTwo  = get_node("/root/Overworld/Player/Recipe/RecipeTwo/LineTwo/Check")
-	#checkThree  = get_node("/root/Overworld/Player/Recipe/RecipeThree/LineThree/Check")
-	#checkFour  = get_node("/root/Overworld/Player/Recipe/RecipeFour/LineFour/Check")
-	#checkFive  = get_node("/root/Overworld/Player/Recipe/RecipeFive/LineFive/Check")
-	#checkSix  = get_node("/root/Overworld/Player/Recipe/RecipeSix/LineSix/Check")
-	#checkSeven  = get_node("/root/Overworld/Player/Recipe/RecipeSeven/LineSeven/Check")
-	#checkEight  = get_node("/root/Overworld/Player/Recipe/RecipeEight/LineEight/Check")
-	#checkNine  = get_node("/root/Overworld/Player/Recipe/RecipeNine/LineNine/Check")
-	#checkTen  = get_node("/root/Overworld/Player/Recipe/RecipeTen/LineTen/Check")
-	#checkEleven  = get_node("/root/Overworld/Player/Recipe/RecipeEleven/LineEleven/Check")
-	#checkTwelve  = get_node("/root/Overworld/Player/Recipe/RecipeTwelve/LineTwelve/Check")
-	#checkThirteen  = get_node("/root/Overworld/Player/Recipe/RecipeThirteen/LineThirteen/Check")
-	#checkFourteen  = get_node("/root/Overworld/Player/Recipe/RecipeFourteen/LineFourteen/Check")
-	#checkFifteen  = get_node("/root/Overworld/Player/Recipe/RecipeFifteen/LineFifteen/Check")
 
 func _physics_process(_delta: float) -> void:
 	if(canMove):

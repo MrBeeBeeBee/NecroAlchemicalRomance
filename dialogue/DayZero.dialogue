@@ -145,7 +145,7 @@ set Player.canMove = true
 ~ EndOfDayZeroCutscene
 set Player.canMove = false
 
-if (Player.dayZeroMarker == 4):
+if (Player.dayZeroMarker >= 4):
 	I've talked to everyone today, and none of them recognized the book. If Harry hasn't showed it to any of them, maybe he meant to leave it for me...
 	Those #######s let him die, whether they'll admit it or not. If the recipes in this book are what it takes to bring him back, they can all rot.
 	Anything to bring Harry back...

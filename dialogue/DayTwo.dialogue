@@ -109,7 +109,7 @@ set Player.canMove = true
 ~ EndOfDayTwoCutscene
 set Player.canMove = false
 
-if (IM.inventory[4] && IM.inventory[5] && IM.inventory[6] && IM.inventory[7]):
+if (IM.inventory[4] && IM.inventory[5] && IM.inventory[6]):
 	I've gathered all the items I need for today's recipe.
 	I know it was cruel to kill Judith like that, especially when she had nothing but trust in me.
 	Judith's death will haunt me for the rest of my life, but I'd still rather spend it with Harry.
